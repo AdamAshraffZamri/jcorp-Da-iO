@@ -1,0 +1,702 @@
+[
+  {
+    "Date": "2026-01-01",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "53692.33",
+    "Actual_Value": "54377.8"
+  },
+  {
+    "Date": "2026-01-02",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1188.44",
+    "Actual_Value": "1164.35"
+  },
+  {
+    "Date": "2026-01-03",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "42607.39",
+    "Actual_Value": "39728.01"
+  },
+  {
+    "Date": "2026-01-04",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "47696.81",
+    "Actual_Value": "51925.3"
+  },
+  {
+    "Date": "2026-01-05",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "51718.09",
+    "Actual_Value": "44665.93"
+  },
+  {
+    "Date": "2026-01-06",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1232.41",
+    "Actual_Value": "1201.6"
+  },
+  {
+    "Date": "2026-01-07",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "46615.39",
+    "Actual_Value": "49062.1"
+  },
+  {
+    "Date": "2026-01-08",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "55155.0",
+    "Actual_Value": "58880.12"
+  },
+  {
+    "Date": "2026-01-09",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "45803.91",
+    "Actual_Value": "44567.06"
+  },
+  {
+    "Date": "2026-01-10",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1233.13",
+    "Actual_Value": "1311.17"
+  },
+  {
+    "Date": "2026-01-11",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "47604.13",
+    "Actual_Value": "-230293.67"
+  },
+  {
+    "Date": "2026-01-12",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "54750.03",
+    "Actual_Value": "61656.1"
+  },
+  {
+    "Date": "2026-01-13",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "52289.43",
+    "Actual_Value": "45552.28"
+  },
+  {
+    "Date": "2026-01-14",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "51634.23",
+    "Actual_Value": "51309.75"
+  },
+  {
+    "Date": "2026-01-15",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1246.78",
+    "Actual_Value": "1305.67"
+  },
+  {
+    "Date": "2026-01-16",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "46101.49",
+    "Actual_Value": "42725.9"
+  },
+  {
+    "Date": "2026-01-17",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1184.95",
+    "Actual_Value": "1107.71"
+  },
+  {
+    "Date": "2026-01-18",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1215.05",
+    "Actual_Value": "1205.98"
+  },
+  {
+    "Date": "2026-01-19",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1463.35",
+    "Actual_Value": "1381.34"
+  },
+  {
+    "Date": "2026-01-20",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "46089.76",
+    "Actual_Value": "47785.53"
+  },
+  {
+    "Date": "2026-01-21",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1287.27",
+    "Actual_Value": "1470.25"
+  },
+  {
+    "Date": "2026-01-22",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "58114.6",
+    "Actual_Value": "61409.53"
+  },
+  {
+    "Date": "2026-01-23",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1229.31",
+    "Actual_Value": "1301.04"
+  },
+  {
+    "Date": "2026-01-24",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1138.97",
+    "Actual_Value": "1113.68"
+  },
+  {
+    "Date": "2026-01-25",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1051.76",
+    "Actual_Value": "1033.45"
+  },
+  {
+    "Date": "2026-01-26",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1296.26",
+    "Actual_Value": "6630.21"
+  },
+  {
+    "Date": "2026-01-27",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1169.07",
+    "Actual_Value": "1222.92"
+  },
+  {
+    "Date": "2026-01-28",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1174.34",
+    "Actual_Value": "1144.91"
+  },
+  {
+    "Date": "2026-01-29",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1327.37",
+    "Actual_Value": "1304.01"
+  },
+  {
+    "Date": "2026-01-30",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "934.48",
+    "Actual_Value": "962.12"
+  },
+  {
+    "Date": "2026-01-31",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "48022.42",
+    "Actual_Value": "46865.87"
+  },
+  {
+    "Date": "2026-02-01",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "52264.68",
+    "Actual_Value": "51600.44"
+  },
+  {
+    "Date": "2026-02-02",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1221.49",
+    "Actual_Value": "1059.7"
+  },
+  {
+    "Date": "2026-02-03",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1105.69",
+    "Actual_Value": "1218.01"
+  },
+  {
+    "Date": "2026-02-04",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1198.14",
+    "Actual_Value": "1064.26"
+  },
+  {
+    "Date": "2026-02-05",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "44637.34",
+    "Actual_Value": "40667.0"
+  },
+  {
+    "Date": "2026-02-06",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1210.23",
+    "Actual_Value": "1175.62"
+  },
+  {
+    "Date": "2026-02-07",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "46704.09",
+    "Actual_Value": "46719.84"
+  },
+  {
+    "Date": "2026-02-08",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "52388.77",
+    "Actual_Value": "51352.66"
+  },
+  {
+    "Date": "2026-02-09",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "47126.45",
+    "Actual_Value": "45440.46"
+  },
+  {
+    "Date": "2026-02-10",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "51699.1",
+    "Actual_Value": "51669.58"
+  },
+  {
+    "Date": "2026-02-11",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "53836.48",
+    "Actual_Value": "49237.31"
+  },
+  {
+    "Date": "2026-02-12",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1122.47",
+    "Actual_Value": "1184.32"
+  },
+  {
+    "Date": "2026-02-13",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1119.82",
+    "Actual_Value": "1230.54"
+  },
+  {
+    "Date": "2026-02-14",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1340.52",
+    "Actual_Value": "1451.91"
+  },
+  {
+    "Date": "2026-02-15",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1111.94",
+    "Actual_Value": "1118.09"
+  },
+  {
+    "Date": "2026-02-16",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1150.66",
+    "Actual_Value": "1224.51"
+  },
+  {
+    "Date": "2026-02-17",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "58533.02",
+    "Actual_Value": "-288117.03"
+  },
+  {
+    "Date": "2026-02-18",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1146.38",
+    "Actual_Value": "1234.1"
+  },
+  {
+    "Date": "2026-02-19",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1242.8",
+    "Actual_Value": "1045.22"
+  },
+  {
+    "Date": "2026-02-20",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "52409.9",
+    "Actual_Value": "56115.73"
+  },
+  {
+    "Date": "2026-02-21",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1116.24",
+    "Actual_Value": "1170.41"
+  },
+  {
+    "Date": "2026-02-22",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "59361.6",
+    "Actual_Value": "60947.1"
+  },
+  {
+    "Date": "2026-02-23",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1137.44",
+    "Actual_Value": "1095.64"
+  },
+  {
+    "Date": "2026-02-24",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "50065.17",
+    "Actual_Value": "51576.25"
+  },
+  {
+    "Date": "2026-02-25",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1206.28",
+    "Actual_Value": "1246.41"
+  },
+  {
+    "Date": "2026-02-26",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1185.31",
+    "Actual_Value": "1199.76"
+  },
+  {
+    "Date": "2026-02-27",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "54824.05",
+    "Actual_Value": "50564.73"
+  },
+  {
+    "Date": "2026-02-28",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "50543.56",
+    "Actual_Value": "50966.61"
+  },
+  {
+    "Date": "2026-03-01",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "54603.33",
+    "Actual_Value": "53696.44"
+  },
+  {
+    "Date": "2026-03-02",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "53265.24",
+    "Actual_Value": "57675.99"
+  },
+  {
+    "Date": "2026-03-03",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "40750.99",
+    "Actual_Value": "45425.51"
+  },
+  {
+    "Date": "2026-03-04",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "45073.09",
+    "Actual_Value": "40697.33"
+  },
+  {
+    "Date": "2026-03-05",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "35602.72",
+    "Actual_Value": "-140578.71"
+  },
+  {
+    "Date": "2026-03-06",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "45126.59",
+    "Actual_Value": "48274.93"
+  },
+  {
+    "Date": "2026-03-07",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1315.86",
+    "Actual_Value": "1250.21"
+  },
+  {
+    "Date": "2026-03-08",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1296.34",
+    "Actual_Value": "1329.36"
+  },
+  {
+    "Date": "2026-03-09",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "54110.3",
+    "Actual_Value": "61697.47"
+  },
+  {
+    "Date": "2026-03-10",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1175.46",
+    "Actual_Value": "1115.16"
+  },
+  {
+    "Date": "2026-03-11",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1111.05",
+    "Actual_Value": "1045.79"
+  },
+  {
+    "Date": "2026-03-12",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1192.29",
+    "Actual_Value": "1219.58"
+  },
+  {
+    "Date": "2026-03-13",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1227.67",
+    "Actual_Value": "1293.84"
+  },
+  {
+    "Date": "2026-03-14",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "50065.01",
+    "Actual_Value": "55879.15"
+  },
+  {
+    "Date": "2026-03-15",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1173.53",
+    "Actual_Value": "1391.14"
+  },
+  {
+    "Date": "2026-03-16",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "53128.34",
+    "Actual_Value": "49699.71"
+  },
+  {
+    "Date": "2026-03-17",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1092.91",
+    "Actual_Value": "1131.51"
+  },
+  {
+    "Date": "2026-03-18",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1177.65",
+    "Actual_Value": "1234.77"
+  },
+  {
+    "Date": "2026-03-19",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1247.32",
+    "Actual_Value": "1241.49"
+  },
+  {
+    "Date": "2026-03-20",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "45766.03",
+    "Actual_Value": "39706.64"
+  },
+  {
+    "Date": "2026-03-21",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1155.35",
+    "Actual_Value": "1223.86"
+  },
+  {
+    "Date": "2026-03-22",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "51070.47",
+    "Actual_Value": "46087.51"
+  },
+  {
+    "Date": "2026-03-23",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1217.32",
+    "Actual_Value": "4432.06"
+  },
+  {
+    "Date": "2026-03-24",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "53175.56",
+    "Actual_Value": "48854.76"
+  },
+  {
+    "Date": "2026-03-25",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1069.43",
+    "Actual_Value": "1009.37"
+  },
+  {
+    "Date": "2026-03-26",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "44872.5",
+    "Actual_Value": "40140.34"
+  },
+  {
+    "Date": "2026-03-27",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "52248.87",
+    "Actual_Value": "59364.57"
+  },
+  {
+    "Date": "2026-03-28",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1133.31",
+    "Actual_Value": "997.96"
+  },
+  {
+    "Date": "2026-03-29",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "53283.99",
+    "Actual_Value": "47540.39"
+  },
+  {
+    "Date": "2026-03-30",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1081.67",
+    "Actual_Value": "1121.27"
+  },
+  {
+    "Date": "2026-03-31",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1183.47",
+    "Actual_Value": "1128.5"
+  },
+  {
+    "Date": "2026-04-01",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1206.84",
+    "Actual_Value": "1174.09"
+  },
+  {
+    "Date": "2026-04-02",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1388.95",
+    "Actual_Value": "1334.89"
+  },
+  {
+    "Date": "2026-04-03",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1108.66",
+    "Actual_Value": "1072.26"
+  },
+  {
+    "Date": "2026-04-04",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1158.72",
+    "Actual_Value": "1206.37"
+  },
+  {
+    "Date": "2026-04-05",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1000.85",
+    "Actual_Value": "1034.93"
+  },
+  {
+    "Date": "2026-04-06",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1145.87",
+    "Actual_Value": "1208.02"
+  },
+  {
+    "Date": "2026-04-07",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1195.24",
+    "Actual_Value": "1236.74"
+  },
+  {
+    "Date": "2026-04-08",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1160.86",
+    "Actual_Value": "1195.9"
+  },
+  {
+    "Date": "2026-04-09",
+    "Domain": "Operations",
+    "Metric_Name": "Units_Produced",
+    "Target_Value": "1366.38",
+    "Actual_Value": "1307.24"
+  },
+  {
+    "Date": "2026-04-10",
+    "Domain": "Finance",
+    "Metric_Name": "Revenue",
+    "Target_Value": "49464.03",
+    "Actual_Value": "47519.16"
+  }
+]
