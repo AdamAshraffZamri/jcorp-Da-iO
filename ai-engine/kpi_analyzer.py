@@ -1,325 +1,197 @@
 import pandas as pd
 import numpy as np
-from sklearn.neighbors import NearestNeighbors
-from sklearn.preprocessing import StandardScaler
+import json
+import os
+from datetime import timedelta
+
+# ─────────────────────────────────────────────────────────────
+# Root-cause & recommendation templates per metric
+# ─────────────────────────────────────────────────────────────
+ROOT_CAUSE_TEMPLATES = {
+    "Revenue": {
+        "positive": "Revenue exceeded target — possible demand surge or pricing uplift.",
+        "negative": "Revenue fell below target — potential demand drop, churn, or pricing pressure.",
+    },
+    "Units_Produced": {
+        "positive": "Production exceeded target — possible inventory build-up or equipment over-run.",
+        "negative": "Production fell below target — likely supply chain disruption or equipment downtime.",
+    },
+}
+
+ACTION_TEMPLATES = {
+    "Revenue": {
+        "Critical": "Escalate to CFO immediately. Conduct emergency revenue audit and review top-3 accounts.",
+        "High": "Schedule finance review within 24 hrs. Assess sales pipeline and adjust Q-forecast.",
+    },
+    "Units_Produced": {
+        "Critical": "Halt affected production line. Engage maintenance team and notify supply chain manager.",
+        "High": "Increase monitoring frequency on production floor. Review shift logs and material inventory.",
+    },
+}
 
 
-class KPIAnalyzer:
-    """
-    Ingests, cleans, and performs basic anomaly detection on KPI time-series data.
-    """
-
-    def __init__(self, filepath: str):
-        self.filepath = filepath
-        self.df: pd.DataFrame = pd.DataFrame()
-        self._load()
-
-    # ------------------------------------------------------------------
-    # 1. Ingestion
-    # ------------------------------------------------------------------
-    def _load(self) -> None:
-        """Read the CSV into a DataFrame."""
-        self.df = pd.read_csv(self.filepath)
-        print(f"[Load]  Loaded {len(self.df)} rows from '{self.filepath}'.")
-
-    # ------------------------------------------------------------------
-    # 2. Cleaning
-    # ------------------------------------------------------------------
-    def clean(self) -> "KPIAnalyzer":
-        """
-        - Drop rows with any null values.
-        - Convert the 'Date' column to pandas datetime.
-        Returns self for method chaining.
-        """
-        before = len(self.df)
-        self.df.dropna(inplace=True)
-        dropped = before - len(self.df)
-        if dropped:
-            print(f"[Clean] Dropped {dropped} row(s) containing nulls.")
-        else:
-            print("[Clean] No null values found — dataset is clean.")
-
-        self.df["Date"] = pd.to_datetime(self.df["Date"])
-        self.df.sort_values("Date", inplace=True)
-        self.df.reset_index(drop=True, inplace=True)
-        print("[Clean] 'Date' column converted to datetime and rows sorted chronologically.")
-        return self
-
-    # ------------------------------------------------------------------
-    # 3. Anomaly Detection — Z-score
-    # ------------------------------------------------------------------
-    def detect_outliers(self, column: str = "Actual_Value", threshold: float = 3.0) -> pd.DataFrame:
-        """
-        Detect statistical outliers in `column` using the Z-score method.
-
-        A row is flagged as an outlier when |z| >= threshold (default = 3.0).
-        Because Finance and Operations metrics have very different scales,
-        the Z-score is computed *per Domain* so each group is normalised
-        against its own distribution.
-
-        Parameters
-        ----------
-        column    : numeric column to analyse (default 'Actual_Value')
-        threshold : absolute Z-score cutoff     (default 3.0)
-
-        Returns
-        -------
-        DataFrame of flagged rows, sorted by absolute Z-score descending.
-        """
-        if self.df.empty:
-            raise RuntimeError("DataFrame is empty. Run clean() first.")
-
-        # Compute per-domain Z-scores
-        self.df["Z_Score"] = (
-            self.df.groupby("Domain")[column]
-            .transform(lambda x: (x - x.mean()) / x.std(ddof=0))
-        )
-
-        outliers = self.df[self.df["Z_Score"].abs() >= threshold].copy()
-        outliers["Abs_Z"] = outliers["Z_Score"].abs()
-        outliers.sort_values("Abs_Z", ascending=False, inplace=True)
-        outliers.drop(columns=["Abs_Z"], inplace=True)
-
-        print(f"\n{'='*65}")
-        print(f"  Outlier Detection  |  column='{column}'  |  |Z| >= {threshold}")
-        print(f"{'='*65}")
-
-        if outliers.empty:
-            print("  No outliers detected at the given threshold.")
-        else:
-            print(f"  {len(outliers)} outlier(s) found:\n")
-            display_cols = ["Date", "Domain", "Metric_Name",
-                            "Target_Value", "Actual_Value", "Z_Score"]
-            print(
-                outliers[display_cols]
-                .to_string(index=True, float_format=lambda x: f"{x:,.2f}")
-            )
-
-        print(f"{'='*65}\n")
-        return outliers
-
-    # ------------------------------------------------------------------
-    # 4. Anomaly Detection — KNN (Finance domain)
-    # ------------------------------------------------------------------
-    def detect_anomalies_knn(
-        self,
-        domain: str = "Finance",
-        features: "list[str] | None" = None,
-        n_neighbors: int = 5,
-        contamination: float = 0.1,
-    ) -> pd.DataFrame:
-        """
-        Use K-Nearest Neighbors distance scoring to classify data points in
-        `domain` as 'Normal' or 'Anomaly'.
-
-        Algorithm
-        ---------
-        1. Filter the dataset to the requested domain.
-        2. Scale features with StandardScaler (zero mean, unit variance).
-        3. Fit a NearestNeighbors model and compute each point's mean distance
-           to its k nearest neighbours — the *kNN anomaly score*.
-        4. Points whose score exceeds the (1 - contamination) quantile are
-           labelled 'Anomaly'; the rest are labelled 'Normal'.
-
-        Parameters
-        ----------
-        domain        : domain to analyse             (default 'Finance')
-        features      : columns used for fitting      (default ['Target_Value', 'Actual_Value'])
-        n_neighbors   : k for kNN                     (default 5)
-        contamination : expected fraction of outliers (default 0.10 → top 10 %)
-
-        Returns
-        -------
-        Full domain DataFrame with an added 'KNN_Label' column.
-        """
-        if features is None:
-            features = ["Target_Value", "Actual_Value"]
-
-        if self.df.empty:
-            raise RuntimeError("DataFrame is empty. Run clean() first.")
-
-        domain_df = self.df[self.df["Domain"] == domain].copy()
-
-        if domain_df.empty:
-            raise ValueError(f"No rows found for domain='{domain}'.")
-
-        if len(domain_df) <= n_neighbors:
-            raise ValueError(
-                f"Not enough rows ({len(domain_df)}) for n_neighbors={n_neighbors}."
-            )
-
-        # --- Scale features ---
-        scaler = StandardScaler()
-        X_scaled = scaler.fit_transform(domain_df[features])
-
-        # --- Fit kNN (n_neighbors + 1 to exclude self) ---
-        knn = NearestNeighbors(n_neighbors=n_neighbors + 1, algorithm="ball_tree")
-        knn.fit(X_scaled)
-
-        distances, _ = knn.kneighbors(X_scaled)
-        # distances[:,0] is always 0 (self); take mean of the k true neighbours
-        knn_scores = distances[:, 1:].mean(axis=1)
-
-        domain_df["KNN_Score"] = knn_scores
-
-        # --- Threshold: top `contamination` fraction = Anomaly ---
-        threshold = np.quantile(knn_scores, 1.0 - contamination)
-        domain_df["KNN_Label"] = np.where(
-            domain_df["KNN_Score"] >= threshold, "Anomaly", "Normal"
-        )
-
-        anomalies = domain_df[domain_df["KNN_Label"] == "Anomaly"].sort_values(
-            "KNN_Score", ascending=False
-        )
-
-        print(f"\n{'='*65}")
-        print(f"  KNN Anomaly Detection  |  domain='{domain}'  |  k={n_neighbors}")
-        print(f"  features={features}  |  contamination={contamination}")
-        print(f"  Score threshold (≥): {threshold:.4f}")
-        print(f"{'='*65}")
-
-        if anomalies.empty:
-            print("  No anomalies detected.")
-        else:
-            print(f"  {len(anomalies)} anomaly/anomalies flagged:\n")
-            display_cols = ["Date", "Domain", "Metric_Name",
-                            "Target_Value", "Actual_Value", "KNN_Score", "KNN_Label"]
-            print(
-                anomalies[display_cols]
-                .to_string(index=True, float_format=lambda x: f"{x:,.4f}")
-            )
-
-        print(f"{'='*65}\n")
-        return domain_df
-
-    # ------------------------------------------------------------------
-    # 5. Predictive Anomaly Detection — KNN 95th-percentile threshold
-    # ------------------------------------------------------------------
-    def predict_anomalies_knn(
-        self,
-        features: "list[str] | None" = None,
-        n_neighbors: int = 5,
-        percentile: float = 95.0,
-    ) -> tuple[pd.DataFrame, str]:
-        """
-        Train a KNN model on the full dataset and flag rows whose mean
-        distance to their 5 nearest neighbours exceeds the 95th percentile
-        of all distances as 'Anomaly'.
-
-        Algorithm
-        ---------
-        1. Scale ['Target_Value', 'Actual_Value'] with StandardScaler.
-        2. Fit NearestNeighbors(k=5) on the scaled feature matrix.
-        3. Compute each point's mean distance to its k true neighbours
-           (self-distance excluded).
-        4. Derive the anomaly threshold as np.percentile(scores, 95).
-        5. Flag rows where score >= threshold as 'Anomaly'.
-        6. Return the anomaly-only DataFrame and its JSON representation.
-
-        Parameters
-        ----------
-        features    : feature columns to use (default ['Target_Value', 'Actual_Value'])
-        n_neighbors : k for kNN              (default 5)
-        percentile  : distance percentile cutoff (default 95.0)
-
-        Returns
-        -------
-        (anomaly_df, json_string)
-            anomaly_df  — DataFrame of flagged rows with KNN_Score & KNN_Label
-            json_string — JSON export of anomaly_df (orient='records', date ISO format)
-        """
-        if features is None:
-            features = ["Target_Value", "Actual_Value"]
-
-        if self.df.empty:
-            raise RuntimeError("DataFrame is empty. Run clean() first.")
-
-        if len(self.df) <= n_neighbors:
-            raise ValueError(
-                f"Not enough rows ({len(self.df)}) for n_neighbors={n_neighbors}."
-            )
-
-        working_df = self.df.copy()
-
-        # --- 1. Scale features ---
-        scaler = StandardScaler()
-        X_scaled = scaler.fit_transform(working_df[features])
-
-        # --- 2. Fit kNN (request k+1 to exclude self at index 0) ---
-        knn = NearestNeighbors(n_neighbors=n_neighbors + 1, algorithm="ball_tree")
-        knn.fit(X_scaled)
-
-        # --- 3. Compute anomaly scores ---
-        distances, _ = knn.kneighbors(X_scaled)
-        knn_scores = distances[:, 1:].mean(axis=1)   # exclude self-distance
-
-        working_df["KNN_Score"] = knn_scores
-
-        # --- 4. 95th-percentile threshold ---
-        threshold = float(np.percentile(knn_scores, percentile))
-
-        # --- 5. Label ---
-        working_df["KNN_Label"] = np.where(
-            working_df["KNN_Score"] >= threshold, "Anomaly", "Normal"
-        )
-
-        # --- 6. Isolate anomalies ---
-        anomaly_df = (
-            working_df[working_df["KNN_Label"] == "Anomaly"]
-            .sort_values("KNN_Score", ascending=False)
-            .reset_index(drop=True)
-            .copy()
-        )
-
-        # Serialize Date to ISO string so JSON is human-readable
-        export_df = anomaly_df.copy()
-        export_df["Date"] = export_df["Date"].dt.strftime("%Y-%m-%d")
-        json_string = export_df.to_json(orient="records", indent=2)
-
-        # --- Print summary ---
-        print(f"\n{'='*65}")
-        print(f"  Predictive KNN Detection  |  k={n_neighbors}  |  p{percentile:.0f} threshold")
-        print(f"  features={features}")
-        print(f"  Distance threshold (≥ p{percentile:.0f}): {threshold:.4f}")
-        print(f"{'='*65}")
-
-        if anomaly_df.empty:
-            print("  No anomalies detected at the given percentile threshold.")
-        else:
-            print(f"  {len(anomaly_df)} anomaly/anomalies flagged:\n")
-            display_cols = ["Date", "Domain", "Metric_Name",
-                            "Target_Value", "Actual_Value", "KNN_Score", "KNN_Label"]
-            print(
-                anomaly_df[display_cols]
-                .to_string(index=True, float_format=lambda x: f"{x:,.4f}")
-            )
-            print(f"\n  JSON export:\n{json_string}")
-
-        print(f"{'='*65}\n")
-        return anomaly_df, json_string
+def classify_risk(variance_pct: float) -> str:
+    """Critical if |variance| >= 30%, High if >= 10%, else Low."""
+    abs_v = abs(variance_pct)
+    if abs_v >= 30:
+        return "Critical"
+    elif abs_v >= 10:
+        return "High"
+    return "Low"
 
 
-# ------------------------------------------------------------------
-# Entry point
-# ------------------------------------------------------------------
-if __name__ == "__main__":
-    analyzer = KPIAnalyzer("sample_kpi_data.csv")
-    analyzer.clean()
+def get_root_cause(metric: str, variance_pct: float) -> str:
+    tpl = ROOT_CAUSE_TEMPLATES.get(metric, {})
+    if variance_pct >= 0:
+        return tpl.get("positive", "Actual exceeded target — investigate root cause.")
+    return tpl.get("negative", "Actual fell below target — investigate root cause.")
 
-    # Method 3 — Z-score outlier detection (all domains)
-    analyzer.detect_outliers(column="Actual_Value", threshold=3.0)
 
-    # Method 4 — KNN anomaly detection (Finance domain, contamination-based)
-    analyzer.detect_anomalies_knn(
-        domain="Finance",
-        features=["Target_Value", "Actual_Value"],
-        n_neighbors=5,
-        contamination=0.10,
+def get_action(metric: str, risk: str) -> str:
+    return ACTION_TEMPLATES.get(metric, {}).get(
+        risk, "Review metric trend and escalate as needed."
     )
 
-    # Method 5 — Predictive KNN detection (all domains, 95th-percentile threshold)
-    anomaly_df, json_out = analyzer.predict_anomalies_knn(
-        features=["Target_Value", "Actual_Value"],
-        n_neighbors=5,
-        percentile=95.0,
+
+def seven_day_forecast(domain_df: pd.DataFrame, metric: str, ref_date: pd.Timestamp) -> str:
+    """
+    Estimate 7-day recurrence probability from the variance trajectory
+    of the last 14 days before ref_date for the given metric.
+    Uses: % of those days that were also anomalous (|variance| >= 10%)
+    scaled to 0-100%.
+    """
+    window = domain_df[
+        (domain_df["Metric_Name"] == metric)
+        & (domain_df["Date"] >= ref_date - timedelta(days=14))
+        & (domain_df["Date"] < ref_date)
+    ].copy()
+
+    if window.empty:
+        return "50% probability of recurring failure"
+
+    window["var_pct"] = (
+        (window["Actual_Value"] - window["Target_Value"]) / window["Target_Value"] * 100
+    )
+    anomalous_days = (window["var_pct"].abs() >= 10).sum()
+    total_days = len(window)
+    base_prob = round((anomalous_days / total_days) * 100)
+
+    # Trend boost: if last 3 readings are worsening, add 15 pp
+    recent = window.tail(3)["var_pct"].abs()
+    if len(recent) >= 2 and recent.iloc[-1] > recent.iloc[0]:
+        base_prob = min(base_prob + 15, 99)
+
+    return f"{base_prob}% probability of recurring failure"
+
+
+# ─────────────────────────────────────────────────────────────
+# Main pipeline
+# ─────────────────────────────────────────────────────────────
+def run_pipeline(csv_path: str, output_path: str) -> None:
+    print(f"\n{'='*65}")
+    print("  jcorp Da-iO  |  KPI Anomaly Engine")
+    print(f"{'='*65}\n")
+
+    # 1. Load & clean
+    df = pd.read_csv(csv_path)
+    df.dropna(inplace=True)
+    df["Date"] = pd.to_datetime(df["Date"])
+    df.sort_values("Date", inplace=True)
+    df.reset_index(drop=True, inplace=True)
+    print(f"[Load]  {len(df)} rows loaded from '{csv_path}'.")
+
+    # 2. Calculate variance % and risk score
+    df["Variance_Pct"] = (
+        (df["Actual_Value"] - df["Target_Value"]) / df["Target_Value"] * 100
+    ).round(2)
+    df["Risk_Score"] = df["Variance_Pct"].apply(classify_risk)
+
+    # 3. Zero-fatigue filtering — drop Low risk
+    before = len(df)
+    df = df[df["Risk_Score"] != "Low"].copy()
+    print(f"[Filter] Dropped {before - len(df)} Low-risk rows. {len(df)} alerts remaining.")
+
+    if df.empty:
+        print("[Warning] No Critical or High alerts found. Writing empty JSON.")
+        with open(output_path, "w") as f:
+            json.dump([], f, indent=2)
+        return
+
+    # 4. Build base alert list
+    alerts = []
+    for _, row in df.iterrows():
+        alert = {
+            "date_detected": row["Date"].strftime("%Y-%m-%d"),
+            "primary_domain": row["Domain"],
+            "metric_name": row["Metric_Name"],
+            "variance_percentage": round(float(row["Variance_Pct"]), 2),
+            "risk_score": row["Risk_Score"],
+            "root_cause_alert": get_root_cause(row["Metric_Name"], row["Variance_Pct"]),
+            "7_day_forecast": seven_day_forecast(df, row["Metric_Name"], row["Date"]),
+            "recommended_action": get_action(row["Metric_Name"], row["Risk_Score"]),
+            "correlated_domain": None,
+            "correlation_note": None,
+        }
+        alerts.append(alert)
+
+    # 5. Cross-domain correlation (±1 day window)
+    fin_dates = {
+        pd.Timestamp(a["date_detected"])
+        for a in alerts if a["primary_domain"] == "Finance"
+    }
+    ops_dates = {
+        pd.Timestamp(a["date_detected"])
+        for a in alerts if a["primary_domain"] == "Operations"
+    }
+
+    correlated = 0
+    for alert in alerts:
+        ref = pd.Timestamp(alert["date_detected"])
+        window = {ref - timedelta(days=1), ref, ref + timedelta(days=1)}
+
+        if alert["primary_domain"] == "Finance" and window & ops_dates:
+            alert["correlated_domain"] = "Operations"
+            alert["correlation_note"] = (
+                "Operational disruption detected within ±1 day — "
+                "production shortfall likely contributed to this financial variance."
+            )
+            correlated += 1
+        elif alert["primary_domain"] == "Operations" and window & fin_dates:
+            alert["correlated_domain"] = "Finance"
+            alert["correlation_note"] = (
+                "Financial anomaly detected within ±1 day — "
+                "this operational deviation may have triggered downstream revenue impact."
+            )
+            correlated += 1
+
+    print(f"[Correlate] {correlated} cross-domain correlations identified.")
+
+    # 6. Sort Critical → High
+    rank = {"Critical": 0, "High": 1}
+    alerts.sort(key=lambda a: rank.get(a["risk_score"], 2))
+
+    # 7. Save JSON
+    os.makedirs(os.path.dirname(output_path) if os.path.dirname(output_path) else ".", exist_ok=True)
+    with open(output_path, "w") as f:
+        json.dump(alerts, f, indent=2)
+
+    critical_n = sum(1 for a in alerts if a["risk_score"] == "Critical")
+    high_n = sum(1 for a in alerts if a["risk_score"] == "High")
+    corr_n = sum(1 for a in alerts if a["correlated_domain"] is not None)
+
+    print(f"\n{'='*65}")
+    print(f"  Output saved -> '{output_path}'")
+    print(f"  Total alerts : {len(alerts)}  |  Critical: {critical_n}  |  High: {high_n}")
+    print(f"  Cross-domain correlations: {corr_n}")
+    print(f"{'='*65}\n")
+
+
+# ─────────────────────────────────────────────────────────────
+# Entry point
+# ─────────────────────────────────────────────────────────────
+if __name__ == "__main__":
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    run_pipeline(
+        csv_path=os.path.join(BASE_DIR, "sample_kpi_data.csv"),
+        output_path=os.path.join(BASE_DIR, "anomalies_alerts.json"),
     )
