@@ -56,7 +56,7 @@
             <h2 class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4">Executive Summary</h2>
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
 
-                {{-- Total KPIs --}}
+                {{-- Total Alerts --}}
                 <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 flex items-center gap-4">
                     <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0">
                         <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -64,8 +64,8 @@
                         </svg>
                     </div>
                     <div>
-                        <p class="text-2xl font-extrabold text-slate-800">{{ $metrics->count() }}</p>
-                        <p class="text-xs text-slate-500 font-medium">KPIs Tracked</p>
+                        <p class="text-2xl font-extrabold text-slate-800">{{ $totalCount }}</p>
+                        <p class="text-xs text-slate-500 font-medium">Total Alerts</p>
                     </div>
                 </div>
 
@@ -112,151 +112,95 @@
         </section>
 
         {{-- ══════════════════════════════════════════════════════════════
-             KPI STATUS CARDS
+             ACTION INBOX — EARLY WARNING ALERTS
         ══════════════════════════════════════════════════════════════ --}}
         <section>
-            <h2 class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4">KPI Performance Overview</h2>
-
-            @if($metrics->isEmpty())
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-10 text-center text-slate-400">
-                    No KPI records found. Run <code class="bg-slate-100 px-1 rounded">php artisan db:seed --class=DashboardSeeder</code> to load sample data.
-                </div>
-            @else
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                    @foreach($metrics as $metric)
-                        @php
-                            $pct        = $metric->target_value > 0
-                                          ? round(($metric->actual_value / $metric->target_value) * 100, 1)
-                                          : 0;
-                            $isOnTarget = $pct >= 95;
-                            $isWarning  = $pct >= 75 && $pct < 95;
-                            // colour scheme
-                            $barColor  = $isOnTarget ? 'bg-emerald-500' : ($isWarning ? 'bg-amber-400' : 'bg-red-500');
-                            $ringColor = $isOnTarget ? 'border-emerald-400' : ($isWarning ? 'border-amber-400' : 'border-red-400');
-                            $dotColor  = $isOnTarget ? 'bg-emerald-400' : ($isWarning ? 'bg-amber-400' : 'bg-red-400');
-                            $labelColor= $isOnTarget ? 'text-emerald-600' : ($isWarning ? 'text-amber-600' : 'text-red-600');
-                            $statusTxt = $isOnTarget ? 'On Target' : ($isWarning ? 'At Risk' : 'Off Target');
-                        @endphp
-
-                        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 flex flex-col gap-4 hover:shadow-md transition-shadow">
-
-                            {{-- Card header --}}
-                            <div class="flex items-start justify-between gap-2">
-                                <div>
-                                    <p class="text-[11px] font-semibold uppercase tracking-widest text-slate-400">{{ $metric->department }}</p>
-                                    <p class="text-base font-bold text-slate-800 leading-snug mt-0.5">{{ $metric->metric_name }}</p>
-                                </div>
-                                <span class="flex items-center gap-1.5 text-xs font-semibold {{ $labelColor }} shrink-0 mt-0.5">
-                                    <span class="w-2 h-2 rounded-full {{ $dotColor }}"></span>
-                                    {{ $statusTxt }}
-                                </span>
-                            </div>
-
-                            {{-- Progress bar --}}
-                            <div>
-                                <div class="flex justify-between text-xs text-slate-500 mb-1.5">
-                                    <span>Progress to Target</span>
-                                    <span class="font-bold {{ $labelColor }}">{{ $pct }}%</span>
-                                </div>
-                                <div class="w-full bg-slate-100 rounded-full h-2.5 overflow-hidden">
-                                    <div class="{{ $barColor }} h-2.5 rounded-full transition-all duration-700"
-                                         style="width: {{ min($pct, 100) }}%"></div>
-                                </div>
-                            </div>
-
-                            {{-- Actual vs Target --}}
-                            <div class="grid grid-cols-2 gap-3 pt-1">
-                                <div class="bg-slate-50 rounded-xl p-3 border border-slate-100">
-                                    <p class="text-[10px] uppercase font-semibold text-slate-400 tracking-wider mb-1">Actual</p>
-                                    <p class="text-lg font-extrabold text-slate-800">
-                                        {{ number_format((float)$metric->actual_value, 2) }}
-                                    </p>
-                                </div>
-                                <div class="bg-slate-50 rounded-xl p-3 border border-slate-100">
-                                    <p class="text-[10px] uppercase font-semibold text-slate-400 tracking-wider mb-1">Target</p>
-                                    <p class="text-lg font-extrabold text-slate-500">
-                                        {{ number_format((float)$metric->target_value, 2) }}
-                                    </p>
-                                </div>
-                            </div>
-
-                            {{-- Date & alert count --}}
-                            <div class="flex items-center justify-between text-xs text-slate-400 border-t border-slate-100 pt-3">
-                                <span>{{ \Carbon\Carbon::parse($metric->recorded_date)->format('M j, Y') }}</span>
-                                @if($metric->alerts->isNotEmpty())
-                                    <span class="text-red-500 font-semibold">
-                                        {{ $metric->alerts->count() }} alert{{ $metric->alerts->count() > 1 ? 's' : '' }}
-                                    </span>
-                                @else
-                                    <span class="text-emerald-500 font-semibold">No alerts</span>
-                                @endif
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            @endif
-        </section>
-
-        {{-- ══════════════════════════════════════════════════════════════
-             EARLY WARNING ALERTS TABLE
-        ══════════════════════════════════════════════════════════════ --}}
-        <section>
-            <h2 class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4">Early Warning Alerts</h2>
+            <h2 class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4">Action Inbox — Early Warning Alerts</h2>
 
             <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-                @if($allAlerts->isEmpty())
+                @if(empty($alerts))
                     <div class="p-10 text-center text-slate-400">
-                        No active alerts. All KPIs are performing within acceptable thresholds.
+                        No active alerts. Ensure <code class="bg-slate-100 px-1 rounded">ai-engine/anomalies_alerts.json</code> exists and is populated.
                     </div>
                 @else
                     <div class="overflow-x-auto">
                         <table class="w-full text-sm">
                             <thead>
                                 <tr class="bg-slate-50 border-b border-slate-200 text-left">
-                                    <th class="px-5 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-500 w-[130px]">Risk Level</th>
-                                    <th class="px-5 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-500">Alert Title</th>
-                                    <th class="px-5 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-500 hidden md:table-cell">KPI / Department</th>
-                                    <th class="px-5 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-500 hidden lg:table-cell">Root Cause</th>
+                                    <th class="px-5 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-500">Risk</th>
+                                    <th class="px-5 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-500">Date</th>
+                                    <th class="px-5 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-500">Domain / Metric</th>
+                                    <th class="px-5 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-500 hidden sm:table-cell">Variance</th>
+                                    <th class="px-5 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-500 hidden md:table-cell">Root Cause</th>
                                     <th class="px-5 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-500 hidden lg:table-cell">Recommended Action</th>
                                 </tr>
                             </thead>
                             <tbody class="divide-y divide-slate-100">
-                                @foreach($allAlerts as $alert)
+                                @foreach($alerts as $alert)
                                     @php
-                                        $rowBg = match($alert->risk_score) {
+                                        $risk = $alert['risk_score'];
+                                        $rowBg = match($risk) {
                                             'Critical' => 'bg-red-50/60 hover:bg-red-50',
                                             'High'     => 'bg-orange-50/60 hover:bg-orange-50',
                                             default    => 'bg-white hover:bg-slate-50',
                                         };
-                                        $badgeClass = match($alert->risk_score) {
+                                        $badgeClass = match($risk) {
                                             'Critical' => 'badge-critical',
                                             'High'     => 'badge-high',
                                             default    => 'badge-low',
                                         };
-                                        $badgeDot = match($alert->risk_score) {
+                                        $badgeDot = match($risk) {
                                             'Critical' => 'bg-red-500',
                                             'High'     => 'bg-orange-500',
                                             default    => 'bg-yellow-500',
                                         };
+                                        $variancePct  = $alert['variance_percentage'];
+                                        $varianceColor = $variancePct >= 0 ? 'text-emerald-600' : 'text-red-600';
+                                        $varianceSign  = $variancePct >= 0 ? '+' : '';
                                     @endphp
                                     <tr class="{{ $rowBg }} transition-colors">
+
+                                        {{-- Risk badge --}}
                                         <td class="px-5 py-4">
                                             <span class="{{ $badgeClass }}">
                                                 <span class="w-1.5 h-1.5 rounded-full {{ $badgeDot }}"></span>
-                                                {{ $alert->risk_score }}
+                                                {{ $risk }}
                                             </span>
                                         </td>
-                                        <td class="px-5 py-4 font-semibold text-slate-800">{{ $alert->title }}</td>
-                                        <td class="px-5 py-4 hidden md:table-cell">
-                                            <p class="font-medium text-slate-700">{{ $alert->kpiMetric->metric_name }}</p>
-                                            <p class="text-xs text-slate-400 mt-0.5">{{ $alert->kpiMetric->department }}</p>
+
+                                        {{-- Date --}}
+                                        <td class="px-5 py-4 text-slate-500 text-xs whitespace-nowrap">
+                                            {{ \Carbon\Carbon::parse($alert['date'])->format('M j, Y') }}
                                         </td>
+
+                                        {{-- Domain / Metric --}}
+                                        <td class="px-5 py-4">
+                                            <p class="font-semibold text-slate-800">{{ $alert['metric_name'] }}</p>
+                                            <p class="text-xs text-slate-400 mt-0.5">{{ $alert['domain'] }}</p>
+                                        </td>
+
+                                        {{-- Variance % --}}
+                                        <td class="px-5 py-4 hidden sm:table-cell">
+                                            <span class="font-bold {{ $varianceColor }}">
+                                                {{ $varianceSign }}{{ number_format($variancePct, 2) }}%
+                                            </span>
+                                            <p class="text-xs text-slate-400 mt-0.5">
+                                                Actual: {{ number_format($alert['actual_value'], 2) }}
+                                                &nbsp;/&nbsp;
+                                                Target: {{ number_format($alert['target_value'], 2) }}
+                                            </p>
+                                        </td>
+
+                                        {{-- Root Cause --}}
+                                        <td class="px-5 py-4 text-slate-600 text-xs leading-relaxed hidden md:table-cell max-w-xs">
+                                            {{ $alert['root_cause_alert'] }}
+                                        </td>
+
+                                        {{-- Recommended Action --}}
                                         <td class="px-5 py-4 text-slate-600 text-xs leading-relaxed hidden lg:table-cell max-w-xs">
-                                            {{ $alert->root_cause }}
+                                            {{ $alert['recommended_action'] }}
                                         </td>
-                                        <td class="px-5 py-4 text-slate-600 text-xs leading-relaxed hidden lg:table-cell max-w-xs">
-                                            {{ $alert->recommended_action }}
-                                        </td>
+
                                     </tr>
                                 @endforeach
                             </tbody>
