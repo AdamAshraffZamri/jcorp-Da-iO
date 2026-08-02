@@ -8,6 +8,35 @@ from datetime import timedelta
 # Root-cause & recommendation templates per metric
 # ─────────────────────────────────────────────────────────────
 ROOT_CAUSE_TEMPLATES = {
+    "Daily_Revenue_RM_Mil": {
+        "positive": "Revenue exceeded target — possible demand surge, new contract wins, or favourable commodity pricing.",
+        "negative": "Revenue fell below target — potential demand contraction, project delays, or commodity price headwinds.",
+    },
+    "Daily_Gross_Profit_RM_Mil": {
+        "positive": "Gross profit above target — improved cost efficiencies or higher-margin product mix.",
+        "negative": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
+    },
+    "Daily_Finance_Cost_RM_Mil": {
+        "positive": "Finance costs spiked above target — likely unplanned loan drawdown, interest rate movement, or new lease obligations.",
+        "negative": "Finance costs below target — early loan repayment or favourable refinancing.",
+    },
+    "FFB_Processed_Tonnes": {
+        "positive": "Fresh fruit bunch processing exceeded target — peak harvest season or expanded capacity.",
+        "negative": "FFB processed tonnes fell below target — machinery breakdown, flooding, or pest outbreak in plantation.",
+    },
+    "Patient_Admissions": {
+        "positive": "Patient admissions above target — seasonal demand peak or expanded bed capacity.",
+        "negative": "Patient admissions collapsed below target — IT/booking system outage, competitor pressure, or service disruption.",
+    },
+    "Units_Under_Construction": {
+        "positive": "Construction units above target — accelerated project milestones.",
+        "negative": "Construction units below target — regulatory delays, contractor issues, or material shortages.",
+    },
+    "Outlet_Transactions": {
+        "positive": "Outlet transactions above target — promotional campaign success or new outlet openings.",
+        "negative": "Outlet transactions below target — consumer sentiment decline or supply interruption.",
+    },
+    # Legacy fallbacks
     "Revenue": {
         "positive": "Revenue exceeded target — possible demand surge or pricing uplift.",
         "negative": "Revenue fell below target — potential demand drop, churn, or pricing pressure.",
@@ -19,6 +48,35 @@ ROOT_CAUSE_TEMPLATES = {
 }
 
 ACTION_TEMPLATES = {
+    "Daily_Revenue_RM_Mil": {
+        "Critical": "Escalate to Group CFO and segment CEO immediately. Initiate emergency revenue audit, review top-5 contracts, and assess impact on Group annual guidance.",
+        "High": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers.",
+    },
+    "Daily_Gross_Profit_RM_Mil": {
+        "Critical": "Convene emergency cost-review committee. Engage procurement on input cost hedging and review pricing strategy with commercial team.",
+        "High": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
+    },
+    "Daily_Finance_Cost_RM_Mil": {
+        "Critical": "Alert Group Treasurer and Board Finance Committee. Review all active credit facilities, identify unplanned drawdowns, and assess interest rate exposure.",
+        "High": "Review loan utilisation report. Confirm all drawdowns are approved and evaluate refinancing options to reduce cost.",
+    },
+    "FFB_Processed_Tonnes": {
+        "Critical": "Deploy emergency maintenance team to affected mills. Notify Group Operations Director and activate business continuity plan. Assess crop loss impact.",
+        "High": "Increase mill monitoring frequency. Review equipment service logs and assess estate-level yield data for harvest disruptions.",
+    },
+    "Patient_Admissions": {
+        "Critical": "Escalate to KPJ Healthcare CEO. Investigate booking system and IT infrastructure. Activate patient diversion protocol and notify Ministry of Health if required.",
+        "High": "Review admissions data by hospital unit. Identify specific wards/services affected and engage clinical operations team.",
+    },
+    "Units_Under_Construction": {
+        "Critical": "Alert project directors and legal team. Review contractor performance bonds, assess regulatory compliance, and revise delivery timeline.",
+        "High": "Conduct site progress review. Identify bottlenecks in materials procurement and sub-contractor performance.",
+    },
+    "Outlet_Transactions": {
+        "Critical": "Escalate to QSR Brands CEO. Review outlet-level POS data, identify affected locations, and launch targeted promotional response.",
+        "High": "Analyse transaction data by outlet cluster. Review stock availability and escalate to franchise operations team.",
+    },
+    # Legacy fallbacks
     "Revenue": {
         "Critical": "Escalate to CFO immediately. Conduct emergency revenue audit and review top-3 accounts.",
         "High": "Schedule finance review within 24 hrs. Assess sales pipeline and adjust Q-forecast.",
@@ -28,6 +86,41 @@ ACTION_TEMPLATES = {
         "High": "Increase monitoring frequency on production floor. Review shift logs and material inventory.",
     },
 }
+
+# ─────────────────────────────────────────────────────────────
+# Cross-domain correlation pairs for JCorp segments
+# ─────────────────────────────────────────────────────────────
+# Key insight from AFS 2025:
+#   Agribusiness <-> Real estate and infrastructure
+#     (Plantation land bank feeds property pipeline; CPO price impacts Group cashflow)
+#   Wellness and healthcare <-> Others
+#     (QSR/Others finance costs share treasury pool with KPJ)
+CORRELATION_PAIRS = [
+    (
+        "Agribusiness",
+        "Real estate and infrastructure",
+        "Agribusiness operational disruption detected within ±1 day — plantation output shortfall "
+        "is likely constraining land-bank revenue and project cash flows in Real Estate & Infrastructure.",
+        "Real estate & infrastructure anomaly detected within ±1 day — property revenue shortfall "
+        "may signal cashflow pressure upstream to Agribusiness supply chain and shared financing facilities.",
+    ),
+    (
+        "Wellness and healthcare",
+        "Others",
+        "KPJ Healthcare anomaly detected within ±1 day — patient admission / revenue drop may indicate "
+        "systemic consumer confidence issue also affecting QSR outlet transactions.",
+        "Others (QSR/Outlets) anomaly detected within ±1 day — consumer-facing disruption may cascade "
+        "to Wellness & Healthcare demand signals given shared demographic exposure.",
+    ),
+    (
+        "Agribusiness",
+        "Others",
+        "Agribusiness production anomaly detected within ±1 day — commodity supply pressure may "
+        "affect raw-material costs for QSR/food-processing subsidiaries in Others segment.",
+        "Others (QSR/Outlets) anomaly detected within ±1 day — downstream demand signals may "
+        "indicate commodity pricing pressures feeding back to Agribusiness margins.",
+    ),
+]
 
 
 def classify_risk(variance_pct: float) -> str:
@@ -57,8 +150,6 @@ def seven_day_forecast(domain_df: pd.DataFrame, metric: str, ref_date: pd.Timest
     """
     Estimate 7-day recurrence probability from the variance trajectory
     of the last 14 days before ref_date for the given metric.
-    Uses: % of those days that were also anomalous (|variance| >= 10%)
-    scaled to 0-100%.
     """
     window = domain_df[
         (domain_df["Metric_Name"] == metric)
@@ -120,9 +211,12 @@ def run_pipeline(csv_path: str, output_path: str) -> None:
     # 4. Build base alert list
     alerts = []
     for _, row in df.iterrows():
+        # Determine subsidiary if column exists
+        subsidiary = row.get("Subsidiary", "") if "Subsidiary" in df.columns else ""
         alert = {
             "date_detected": row["Date"].strftime("%Y-%m-%d"),
             "primary_domain": row["Domain"],
+            "subsidiary": subsidiary,
             "metric_name": row["Metric_Name"],
             "variance_percentage": round(float(row["Variance_Pct"]), 2),
             "risk_score": row["Risk_Score"],
@@ -134,46 +228,56 @@ def run_pipeline(csv_path: str, output_path: str) -> None:
         }
         alerts.append(alert)
 
-    # 5. Cross-domain correlation (±1 day window)
-    fin_dates = {
-        pd.Timestamp(a["date_detected"])
-        for a in alerts if a["primary_domain"] == "Finance"
-    }
-    ops_dates = {
-        pd.Timestamp(a["date_detected"])
-        for a in alerts if a["primary_domain"] == "Operations"
-    }
+    # 5. Cross-domain correlation (±1 day window) — JCorp segment pairs
+    # Only correlate CRITICAL-severity alerts to reduce noise; a Critical alert
+    # in one domain triggers correlation check against any alert (Critical or High)
+    # in the paired domain within ±1 day.
+    critical_domain_dates: dict = {}
+    for a in alerts:
+        if a["risk_score"] == "Critical":
+            d = a["primary_domain"]
+            critical_domain_dates.setdefault(d, set()).add(pd.Timestamp(a["date_detected"]))
+
+    # All-alert date sets (Critical + High) for partner matching
+    all_domain_dates: dict = {}
+    for a in alerts:
+        d = a["primary_domain"]
+        all_domain_dates.setdefault(d, set()).add(pd.Timestamp(a["date_detected"]))
 
     correlated = 0
     for alert in alerts:
         ref = pd.Timestamp(alert["date_detected"])
-        window = {ref - timedelta(days=1), ref, ref + timedelta(days=1)}
+        window_dates = {ref - timedelta(days=1), ref, ref + timedelta(days=1)}
+        domain_a = alert["primary_domain"]
 
-        if alert["primary_domain"] == "Finance" and window & ops_dates:
-            alert["correlated_domain"] = "Operations"
-            alert["correlation_note"] = (
-                "Operational disruption detected within ±1 day — "
-                "production shortfall likely contributed to this financial variance."
-            )
-            correlated += 1
-        elif alert["primary_domain"] == "Operations" and window & fin_dates:
-            alert["correlated_domain"] = "Finance"
-            alert["correlation_note"] = (
-                "Financial anomaly detected within ±1 day — "
-                "this operational deviation may have triggered downstream revenue impact."
-            )
-            correlated += 1
+        for (pair_x, pair_y, note_x, note_y) in CORRELATION_PAIRS:
+            # Only correlate if THIS alert is Critical AND the partner domain
+            # has at least one Critical alert within the ±1-day window
+            if domain_a == pair_x and alert["risk_score"] == "Critical":
+                partner_critical = critical_domain_dates.get(pair_y, set())
+                if window_dates & partner_critical:
+                    alert["correlated_domain"] = pair_y
+                    alert["correlation_note"] = note_x
+                    correlated += 1
+                    break
+            elif domain_a == pair_y and alert["risk_score"] == "Critical":
+                partner_critical = critical_domain_dates.get(pair_x, set())
+                if window_dates & partner_critical:
+                    alert["correlated_domain"] = pair_x
+                    alert["correlation_note"] = note_y
+                    correlated += 1
+                    break
 
     print(f"[Correlate] {correlated} cross-domain correlations identified.")
 
-    # 6. Sort Critical → High
+    # 6. Sort Critical -> High, then by date
     rank = {"Critical": 0, "High": 1}
-    alerts.sort(key=lambda a: rank.get(a["risk_score"], 2))
+    alerts.sort(key=lambda a: (rank.get(a["risk_score"], 2), a["date_detected"]))
 
     # 7. Save JSON
     os.makedirs(os.path.dirname(output_path) if os.path.dirname(output_path) else ".", exist_ok=True)
-    with open(output_path, "w") as f:
-        json.dump(alerts, f, indent=2)
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(alerts, f, indent=2, ensure_ascii=False)
 
     critical_n = sum(1 for a in alerts if a["risk_score"] == "Critical")
     high_n = sum(1 for a in alerts if a["risk_score"] == "High")

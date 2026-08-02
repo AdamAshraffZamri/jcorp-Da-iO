@@ -113,12 +113,15 @@
                     </div>
                 </div>
 
-                <div class="flex items-baseline gap-3 mb-2">
+                <div class="flex items-baseline gap-3 mb-1">
                     <h3 class="text-lg font-bold text-white">{{ str_replace('_', ' ', $alert['metric_name']) }}</h3>
                     <span class="text-red-400 text-sm font-semibold">
                         {{ $alert['variance_percentage'] > 0 ? '+' : '' }}{{ number_format($alert['variance_percentage'], 1) }}%
                     </span>
                 </div>
+                @if(!empty($alert['subsidiary']))
+                <p class="text-indigo-400 text-xs mb-2">{{ $alert['subsidiary'] }}</p>
+                @endif
 
                 <p class="text-gray-400 text-sm mb-1 line-clamp-2">
                     <span class="text-gray-500 uppercase text-xs tracking-wider mr-1">Root Cause:</span>
@@ -197,6 +200,9 @@
                             </span>
                             @endif
                         </div>
+                        @if(!empty($alert['subsidiary']))
+                        <div class="text-indigo-400 text-xs mt-0.5">{{ $alert['subsidiary'] }}</div>
+                        @endif
                     </td>
                     <td class="px-4 py-3 font-medium text-white">{{ str_replace('_', ' ', $alert['metric_name']) }}</td>
                     <td class="px-4 py-3 text-right font-semibold {{ $alert['variance_percentage'] < 0 ? 'text-red-400' : 'text-green-400' }}">
@@ -262,11 +268,12 @@
 
     <div class="px-6 py-6 space-y-6">
 
-        {{-- Metric + Date --}}
+        {{-- Metric + Date + Subsidiary --}}
         <div>
             <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Metric</p>
             <h2 id="panel-metric" class="text-2xl font-bold text-white"></h2>
-            <p id="panel-date" class="text-gray-500 text-sm mt-1"></p>
+            <p id="panel-subsidiary" class="text-indigo-400 text-xs font-medium mt-1"></p>
+            <p id="panel-date" class="text-gray-500 text-sm mt-0.5"></p>
         </div>
 
         {{-- Variance --}}
@@ -358,9 +365,11 @@ function openDetail(idx) {
         corrBadge.classList.add('hidden');
     }
 
-    // Metric & date
+    // Metric, subsidiary & date
     document.getElementById('panel-metric').textContent =
         a.metric_name.replace(/_/g, ' ');
+    const subEl = document.getElementById('panel-subsidiary');
+    subEl.textContent = a.subsidiary ? a.subsidiary : '';
     document.getElementById('panel-date').textContent = 'Detected: ' + a.date_detected;
 
     // Variance
