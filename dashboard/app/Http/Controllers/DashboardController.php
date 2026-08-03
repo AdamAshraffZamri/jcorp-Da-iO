@@ -8,7 +8,7 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $jsonPath = base_path('../ai-engine/anomalies_alerts.json');
+        $jsonPath = storage_path('app/anomalies_alerts.json');
 
         if (! file_exists($jsonPath)) {
             $alerts = [];
