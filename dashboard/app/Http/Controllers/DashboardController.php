@@ -2,30 +2,38 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\KpiMetric;
+use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
     public function index()
     {
-        $metrics = KpiMetric::with('alerts')
-            ->orderBy('department')
-            ->orderBy('recorded_date', 'desc')
-            ->get();
+        $jsonPath = base_path('../ai-engine/anomalies_alerts.json');
 
-        $allAlerts = $metrics
-            ->flatMap(fn ($m) => $m->alerts)
-            ->sortByDesc(fn ($a) => match ($a->risk_score) {
-                'Critical' => 3,
-                'High'     => 2,
-                default    => 1,
-            })
-            ->values();
+        if (! file_exists($jsonPath)) {
+            $alerts = [];
+        } else {
+            $alerts = json_decode(file_get_contents($jsonPath), true) ?? [];
+        }
 
-        $criticalCount = $allAlerts->where('risk_score', 'Critical')->count();
-        $highCount     = $allAlerts->where('risk_score', 'High')->count();
-        $lowCount      = $allAlerts->where('risk_score', 'Low')->count();
+        // Separate Critical vs High
+        $critical = array_values(array_filter($alerts, fn($a) => $a['risk_score'] === 'Critical'));
+        $high     = array_values(array_filter($alerts, fn($a) => $a['risk_score'] === 'High'));
 
-        return view('dashboard', compact('metrics', 'allAlerts', 'criticalCount', 'highCount', 'lowCount'));
+        // Counts
+        $totalCount    = count($alerts);
+        $criticalCount = count($critical);
+        $highCount     = count($high);
+        $correlatedCount = count(array_filter($alerts, fn($a) => ! empty($a['correlated_domain'])));
+
+        return view('dashboard', compact(
+            'alerts',
+            'critical',
+            'high',
+            'totalCount',
+            'criticalCount',
+            'highCount',
+            'correlatedCount'
+        ));
     }
 }
