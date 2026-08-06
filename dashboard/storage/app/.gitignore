@@ -2,3 +2,8 @@
 !private/
 !public/
 !.gitignore
+<<<<<<< HEAD
+=======
+!anomalies_alerts.json
+!signal_funnel.json
+>>>>>>> claude

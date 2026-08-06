@@ -123,6 +123,29 @@ CORRELATION_PAIRS = [
 ]
 
 
+# ─────────────────────────────────────────────────────────────
+# Metric direction — is a HIGHER actual value good or bad?
+# Used to flag "Opportunity" (favourable) anomalies vs true risks.
+# ─────────────────────────────────────────────────────────────
+HIGHER_IS_BETTER = {
+    "Daily_Revenue_RM_Mil": True,
+    "Daily_Gross_Profit_RM_Mil": True,
+    "Daily_Finance_Cost_RM_Mil": False,   # lower finance cost is better
+    "FFB_Processed_Tonnes": True,
+    "Patient_Admissions": True,
+    "Units_Under_Construction": True,
+    "Outlet_Transactions": True,
+    "Revenue": True,
+    "Units_Produced": True,
+}
+
+
+def is_favourable(metric: str, variance_pct: float) -> bool:
+    """True when the deviation is actually GOOD news for the business."""
+    higher_better = HIGHER_IS_BETTER.get(metric, True)
+    return (variance_pct > 0) == higher_better
+
+
 def classify_risk(variance_pct: float) -> str:
     """Critical if |variance| >= 30%, High if >= 10%, else Low."""
     abs_v = abs(variance_pct)
@@ -198,14 +221,25 @@ def run_pipeline(csv_path: str, output_path: str) -> None:
     df["Risk_Score"] = df["Variance_Pct"].apply(classify_risk)
 
     # 3. Zero-fatigue filtering — drop Low risk
-    before = len(df)
+    total_signals = len(df)
     df = df[df["Risk_Score"] != "Low"].copy()
-    print(f"[Filter] Dropped {before - len(df)} Low-risk rows. {len(df)} alerts remaining.")
+    suppressed_count = total_signals - len(df)
+    print(f"[Filter] Dropped {suppressed_count} Low-risk rows. {len(df)} alerts remaining.")
+
+    output_dir = os.path.dirname(output_path) if os.path.dirname(output_path) else "."
+    funnel_path = os.path.join(output_dir, "signal_funnel.json")
 
     if df.empty:
         print("[Warning] No Critical or High alerts found. Writing empty JSON.")
+        os.makedirs(output_dir, exist_ok=True)
         with open(output_path, "w") as f:
             json.dump([], f, indent=2)
+        with open(funnel_path, "w") as f:
+            json.dump({
+                "total_signals": total_signals,
+                "suppressed_count": suppressed_count,
+                "retained_count": 0,
+            }, f, indent=2)
         return
 
     # 4. Build base alert list
@@ -218,6 +252,8 @@ def run_pipeline(csv_path: str, output_path: str) -> None:
             "primary_domain": row["Domain"],
             "subsidiary": subsidiary,
             "metric_name": row["Metric_Name"],
+            "target_value": round(float(row["Target_Value"]), 2),
+            "actual_value": round(float(row["Actual_Value"]), 2),
             "variance_percentage": round(float(row["Variance_Pct"]), 2),
             "risk_score": row["Risk_Score"],
             "root_cause_alert": get_root_cause(row["Metric_Name"], row["Variance_Pct"]),
@@ -225,6 +261,7 @@ def run_pipeline(csv_path: str, output_path: str) -> None:
             "recommended_action": get_action(row["Metric_Name"], row["Risk_Score"]),
             "correlated_domain": None,
             "correlation_note": None,
+            "is_favourable": is_favourable(row["Metric_Name"], row["Variance_Pct"]),
         }
         alerts.append(alert)
 
@@ -275,18 +312,29 @@ def run_pipeline(csv_path: str, output_path: str) -> None:
     alerts.sort(key=lambda a: (rank.get(a["risk_score"], 2), a["date_detected"]))
 
     # 7. Save JSON
-    os.makedirs(os.path.dirname(output_path) if os.path.dirname(output_path) else ".", exist_ok=True)
+    os.makedirs(output_dir, exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(alerts, f, indent=2, ensure_ascii=False)
 
     critical_n = sum(1 for a in alerts if a["risk_score"] == "Critical")
     high_n = sum(1 for a in alerts if a["risk_score"] == "High")
     corr_n = sum(1 for a in alerts if a["correlated_domain"] is not None)
+    favourable_n = sum(1 for a in alerts if a["is_favourable"])
+
+    # 8. Save signal funnel stats — powers the "Zero-Fatigue" funnel widget
+    with open(funnel_path, "w", encoding="utf-8") as f:
+        json.dump({
+            "total_signals": total_signals,
+            "suppressed_count": suppressed_count,
+            "retained_count": len(alerts),
+        }, f, indent=2)
 
     print(f"\n{'='*65}")
     print(f"  Output saved -> '{output_path}'")
-    print(f"  Total alerts : {len(alerts)}  |  Critical: {critical_n}  |  High: {high_n}")
+    print(f"  Total signals: {total_signals}  |  Suppressed (Low): {suppressed_count}  |  Retained: {len(alerts)}")
+    print(f"  Critical: {critical_n}  |  High: {high_n}  |  Favourable/Opportunity: {favourable_n}")
     print(f"  Cross-domain correlations: {corr_n}")
+    print(f"  Funnel stats saved -> '{funnel_path}'")
     print(f"{'='*65}\n")
 
 
