@@ -1,0 +1,6 @@
+*
+!private/
+!public/
+!.gitignore
+!anomalies_alerts.json
+!signal_funnel.json

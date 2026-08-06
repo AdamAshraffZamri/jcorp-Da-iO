@@ -1,0 +1,802 @@
+[
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": 1.28,
+    "risk_score": "Low",
+    "root_cause_alert": "Revenue in Finance exceeded target 53692.33 slightly (1.28%) - favorable but verify driver.",
+    "recommended_action": "Monitor Revenue trend; no action required this cycle."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": -2.03,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced underperformed in Operations: actual 1164.35 missed target 1188.44 slightly (-2.03%).",
+    "recommended_action": "Note Units_Produced shortfall in the Operations weekly variance log."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": -6.76,
+    "risk_score": "Low",
+    "root_cause_alert": "Revenue underperformed in Finance: actual 39728.01 missed target 42607.39 slightly (-6.76%).",
+    "recommended_action": "Flag Revenue shortfall to Finance owner for next-cycle planning."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": 8.87,
+    "risk_score": "Low",
+    "root_cause_alert": "Revenue in Finance exceeded target 47696.81 slightly (8.87%) - favorable but verify driver.",
+    "recommended_action": "Monitor Revenue trend; no action required this cycle."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": -13.64,
+    "risk_score": "High",
+    "root_cause_alert": "Revenue underperformed in Finance: actual 44665.93 missed target 51718.09 moderately (-13.64%).",
+    "recommended_action": "Trigger Finance commercial review this week; reforecast and deploy tactical promotion or save-the-deal motions."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": -2.5,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced underperformed in Operations: actual 1201.6 missed target 1232.41 slightly (-2.5%).",
+    "recommended_action": "Note Units_Produced shortfall in the Operations weekly variance log."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": 5.25,
+    "risk_score": "Low",
+    "root_cause_alert": "Revenue in Finance exceeded target 46615.39 slightly (5.25%) - favorable but verify driver.",
+    "recommended_action": "Monitor Revenue trend; no action required this cycle."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": 6.75,
+    "risk_score": "Low",
+    "root_cause_alert": "Revenue in Finance exceeded target 55155.0 slightly (6.75%) - favorable but verify driver.",
+    "recommended_action": "Monitor Revenue trend; no action required this cycle."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": -2.7,
+    "risk_score": "Low",
+    "root_cause_alert": "Revenue underperformed in Finance: actual 44567.06 missed target 45803.91 slightly (-2.7%).",
+    "recommended_action": "Flag Revenue shortfall to Finance owner for next-cycle planning."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": 6.33,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced in Operations exceeded target 1233.13 slightly (6.33%) - favorable but verify driver.",
+    "recommended_action": "No action - Units_Produced within acceptable Operations tolerance."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": -583.77,
+    "risk_score": "Critical",
+    "root_cause_alert": "Revenue underperformed in Finance: actual -230293.67 missed target 47604.13 severely (-583.77%).",
+    "recommended_action": "Convene a Finance war-room within 24h; audit pipeline, pricing, and top-account churn drivers."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": 12.61,
+    "risk_score": "High",
+    "root_cause_alert": "Revenue in Finance exceeded target 54750.03 moderately (12.61%) - favorable but verify driver.",
+    "recommended_action": "Validate the Revenue upside driver in Finance; confirm sustainability and book an upside forecast revision."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": -12.88,
+    "risk_score": "High",
+    "root_cause_alert": "Revenue underperformed in Finance: actual 45552.28 missed target 52289.43 moderately (-12.88%).",
+    "recommended_action": "Trigger Finance commercial review this week; reforecast and deploy tactical promotion or save-the-deal motions."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": -0.63,
+    "risk_score": "Low",
+    "root_cause_alert": "Revenue underperformed in Finance: actual 51309.75 missed target 51634.23 slightly (-0.63%).",
+    "recommended_action": "Flag Revenue shortfall to Finance owner for next-cycle planning."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": 4.72,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced in Operations exceeded target 1246.78 slightly (4.72%) - favorable but verify driver.",
+    "recommended_action": "No action - Units_Produced within acceptable Operations tolerance."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": -7.32,
+    "risk_score": "Low",
+    "root_cause_alert": "Revenue underperformed in Finance: actual 42725.9 missed target 46101.49 slightly (-7.32%).",
+    "recommended_action": "Flag Revenue shortfall to Finance owner for next-cycle planning."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": -6.52,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced underperformed in Operations: actual 1107.71 missed target 1184.95 slightly (-6.52%).",
+    "recommended_action": "Note Units_Produced shortfall in the Operations weekly variance log."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": -0.75,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced underperformed in Operations: actual 1205.98 missed target 1215.05 slightly (-0.75%).",
+    "recommended_action": "Note Units_Produced shortfall in the Operations weekly variance log."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": -5.6,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced underperformed in Operations: actual 1381.34 missed target 1463.35 slightly (-5.6%).",
+    "recommended_action": "Note Units_Produced shortfall in the Operations weekly variance log."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": 3.68,
+    "risk_score": "Low",
+    "root_cause_alert": "Revenue in Finance exceeded target 46089.76 slightly (3.68%) - favorable but verify driver.",
+    "recommended_action": "Monitor Revenue trend; no action required this cycle."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": 14.21,
+    "risk_score": "High",
+    "root_cause_alert": "Units_Produced in Operations exceeded target 1287.27 moderately (14.21%) - favorable but verify driver.",
+    "recommended_action": "Validate the Units_Produced upside in Operations; confirm the driver is real and sustainable before updating the forecast."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": 5.67,
+    "risk_score": "Low",
+    "root_cause_alert": "Revenue in Finance exceeded target 58114.6 slightly (5.67%) - favorable but verify driver.",
+    "recommended_action": "Monitor Revenue trend; no action required this cycle."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": 5.83,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced in Operations exceeded target 1229.31 slightly (5.83%) - favorable but verify driver.",
+    "recommended_action": "No action - Units_Produced within acceptable Operations tolerance."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": -2.22,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced underperformed in Operations: actual 1113.68 missed target 1138.97 slightly (-2.22%).",
+    "recommended_action": "Note Units_Produced shortfall in the Operations weekly variance log."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": -1.74,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced underperformed in Operations: actual 1033.45 missed target 1051.76 slightly (-1.74%).",
+    "recommended_action": "Note Units_Produced shortfall in the Operations weekly variance log."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": 411.49,
+    "risk_score": "Critical",
+    "root_cause_alert": "Units_Produced in Operations exceeded target 1296.26 severely (411.49%) - favorable but verify driver.",
+    "recommended_action": "Validate the Units_Produced upside in Operations; confirm the driver is real and sustainable before updating the forecast."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": 4.61,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced in Operations exceeded target 1169.07 slightly (4.61%) - favorable but verify driver.",
+    "recommended_action": "No action - Units_Produced within acceptable Operations tolerance."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": -2.51,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced underperformed in Operations: actual 1144.91 missed target 1174.34 slightly (-2.51%).",
+    "recommended_action": "Note Units_Produced shortfall in the Operations weekly variance log."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": -1.76,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced underperformed in Operations: actual 1304.01 missed target 1327.37 slightly (-1.76%).",
+    "recommended_action": "Note Units_Produced shortfall in the Operations weekly variance log."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": 2.96,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced in Operations exceeded target 934.48 slightly (2.96%) - favorable but verify driver.",
+    "recommended_action": "No action - Units_Produced within acceptable Operations tolerance."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": -2.41,
+    "risk_score": "Low",
+    "root_cause_alert": "Revenue underperformed in Finance: actual 46865.87 missed target 48022.42 slightly (-2.41%).",
+    "recommended_action": "Flag Revenue shortfall to Finance owner for next-cycle planning."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": -1.27,
+    "risk_score": "Low",
+    "root_cause_alert": "Revenue underperformed in Finance: actual 51600.44 missed target 52264.68 slightly (-1.27%).",
+    "recommended_action": "Flag Revenue shortfall to Finance owner for next-cycle planning."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": -13.25,
+    "risk_score": "High",
+    "root_cause_alert": "Units_Produced underperformed in Operations: actual 1059.7 missed target 1221.49 moderately (-13.25%).",
+    "recommended_action": "Brief Operations owner on Units_Produced variance; require a remediation plan within this week."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": 10.16,
+    "risk_score": "High",
+    "root_cause_alert": "Units_Produced in Operations exceeded target 1105.69 moderately (10.16%) - favorable but verify driver.",
+    "recommended_action": "Validate the Units_Produced upside in Operations; confirm the driver is real and sustainable before updating the forecast."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": -11.17,
+    "risk_score": "High",
+    "root_cause_alert": "Units_Produced underperformed in Operations: actual 1064.26 missed target 1198.14 moderately (-11.17%).",
+    "recommended_action": "Brief Operations owner on Units_Produced variance; require a remediation plan within this week."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": -8.89,
+    "risk_score": "Low",
+    "root_cause_alert": "Revenue underperformed in Finance: actual 40667.0 missed target 44637.34 slightly (-8.89%).",
+    "recommended_action": "Flag Revenue shortfall to Finance owner for next-cycle planning."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": -2.86,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced underperformed in Operations: actual 1175.62 missed target 1210.23 slightly (-2.86%).",
+    "recommended_action": "Note Units_Produced shortfall in the Operations weekly variance log."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": 0.03,
+    "risk_score": "Low",
+    "root_cause_alert": "Revenue in Finance exceeded target 46704.09 slightly (0.03%) - favorable but verify driver.",
+    "recommended_action": "Monitor Revenue trend; no action required this cycle."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": -1.98,
+    "risk_score": "Low",
+    "root_cause_alert": "Revenue underperformed in Finance: actual 51352.66 missed target 52388.77 slightly (-1.98%).",
+    "recommended_action": "Flag Revenue shortfall to Finance owner for next-cycle planning."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": -3.58,
+    "risk_score": "Low",
+    "root_cause_alert": "Revenue underperformed in Finance: actual 45440.46 missed target 47126.45 slightly (-3.58%).",
+    "recommended_action": "Flag Revenue shortfall to Finance owner for next-cycle planning."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": -0.06,
+    "risk_score": "Low",
+    "root_cause_alert": "Revenue underperformed in Finance: actual 51669.58 missed target 51699.1 slightly (-0.06%).",
+    "recommended_action": "Flag Revenue shortfall to Finance owner for next-cycle planning."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": -8.54,
+    "risk_score": "Low",
+    "root_cause_alert": "Revenue underperformed in Finance: actual 49237.31 missed target 53836.48 slightly (-8.54%).",
+    "recommended_action": "Flag Revenue shortfall to Finance owner for next-cycle planning."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": 5.51,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced in Operations exceeded target 1122.47 slightly (5.51%) - favorable but verify driver.",
+    "recommended_action": "No action - Units_Produced within acceptable Operations tolerance."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": 9.89,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced in Operations exceeded target 1119.82 slightly (9.89%) - favorable but verify driver.",
+    "recommended_action": "No action - Units_Produced within acceptable Operations tolerance."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": 8.31,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced in Operations exceeded target 1340.52 slightly (8.31%) - favorable but verify driver.",
+    "recommended_action": "No action - Units_Produced within acceptable Operations tolerance."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": 0.55,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced in Operations exceeded target 1111.94 slightly (0.55%) - favorable but verify driver.",
+    "recommended_action": "No action - Units_Produced within acceptable Operations tolerance."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": 6.42,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced in Operations exceeded target 1150.66 slightly (6.42%) - favorable but verify driver.",
+    "recommended_action": "No action - Units_Produced within acceptable Operations tolerance."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": -592.23,
+    "risk_score": "Critical",
+    "root_cause_alert": "Revenue underperformed in Finance: actual -288117.03 missed target 58533.02 severely (-592.23%).",
+    "recommended_action": "Convene a Finance war-room within 24h; audit pipeline, pricing, and top-account churn drivers."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": 7.65,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced in Operations exceeded target 1146.38 slightly (7.65%) - favorable but verify driver.",
+    "recommended_action": "No action - Units_Produced within acceptable Operations tolerance."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": -15.9,
+    "risk_score": "High",
+    "root_cause_alert": "Units_Produced underperformed in Operations: actual 1045.22 missed target 1242.8 moderately (-15.9%).",
+    "recommended_action": "Brief Operations owner on Units_Produced variance; require a remediation plan within this week."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": 7.07,
+    "risk_score": "Low",
+    "root_cause_alert": "Revenue in Finance exceeded target 52409.9 slightly (7.07%) - favorable but verify driver.",
+    "recommended_action": "Monitor Revenue trend; no action required this cycle."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": 4.85,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced in Operations exceeded target 1116.24 slightly (4.85%) - favorable but verify driver.",
+    "recommended_action": "No action - Units_Produced within acceptable Operations tolerance."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": 2.67,
+    "risk_score": "Low",
+    "root_cause_alert": "Revenue in Finance exceeded target 59361.6 slightly (2.67%) - favorable but verify driver.",
+    "recommended_action": "Monitor Revenue trend; no action required this cycle."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": -3.67,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced underperformed in Operations: actual 1095.64 missed target 1137.44 slightly (-3.67%).",
+    "recommended_action": "Note Units_Produced shortfall in the Operations weekly variance log."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": 3.02,
+    "risk_score": "Low",
+    "root_cause_alert": "Revenue in Finance exceeded target 50065.17 slightly (3.02%) - favorable but verify driver.",
+    "recommended_action": "Monitor Revenue trend; no action required this cycle."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": 3.33,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced in Operations exceeded target 1206.28 slightly (3.33%) - favorable but verify driver.",
+    "recommended_action": "No action - Units_Produced within acceptable Operations tolerance."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": 1.22,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced in Operations exceeded target 1185.31 slightly (1.22%) - favorable but verify driver.",
+    "recommended_action": "No action - Units_Produced within acceptable Operations tolerance."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": -7.77,
+    "risk_score": "Low",
+    "root_cause_alert": "Revenue underperformed in Finance: actual 50564.73 missed target 54824.05 slightly (-7.77%).",
+    "recommended_action": "Flag Revenue shortfall to Finance owner for next-cycle planning."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": 0.84,
+    "risk_score": "Low",
+    "root_cause_alert": "Revenue in Finance exceeded target 50543.56 slightly (0.84%) - favorable but verify driver.",
+    "recommended_action": "Monitor Revenue trend; no action required this cycle."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": -1.66,
+    "risk_score": "Low",
+    "root_cause_alert": "Revenue underperformed in Finance: actual 53696.44 missed target 54603.33 slightly (-1.66%).",
+    "recommended_action": "Flag Revenue shortfall to Finance owner for next-cycle planning."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": 8.28,
+    "risk_score": "Low",
+    "root_cause_alert": "Revenue in Finance exceeded target 53265.24 slightly (8.28%) - favorable but verify driver.",
+    "recommended_action": "Monitor Revenue trend; no action required this cycle."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": 11.47,
+    "risk_score": "High",
+    "root_cause_alert": "Revenue in Finance exceeded target 40750.99 moderately (11.47%) - favorable but verify driver.",
+    "recommended_action": "Validate the Revenue upside driver in Finance; confirm sustainability and book an upside forecast revision."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": -9.71,
+    "risk_score": "Low",
+    "root_cause_alert": "Revenue underperformed in Finance: actual 40697.33 missed target 45073.09 slightly (-9.71%).",
+    "recommended_action": "Flag Revenue shortfall to Finance owner for next-cycle planning."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": -494.85,
+    "risk_score": "Critical",
+    "root_cause_alert": "Revenue underperformed in Finance: actual -140578.71 missed target 35602.72 severely (-494.85%).",
+    "recommended_action": "Convene a Finance war-room within 24h; audit pipeline, pricing, and top-account churn drivers."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": 6.98,
+    "risk_score": "Low",
+    "root_cause_alert": "Revenue in Finance exceeded target 45126.59 slightly (6.98%) - favorable but verify driver.",
+    "recommended_action": "Monitor Revenue trend; no action required this cycle."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": -4.99,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced underperformed in Operations: actual 1250.21 missed target 1315.86 slightly (-4.99%).",
+    "recommended_action": "Note Units_Produced shortfall in the Operations weekly variance log."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": 2.55,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced in Operations exceeded target 1296.34 slightly (2.55%) - favorable but verify driver.",
+    "recommended_action": "No action - Units_Produced within acceptable Operations tolerance."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": 14.02,
+    "risk_score": "High",
+    "root_cause_alert": "Revenue in Finance exceeded target 54110.3 moderately (14.02%) - favorable but verify driver.",
+    "recommended_action": "Validate the Revenue upside driver in Finance; confirm sustainability and book an upside forecast revision."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": -5.13,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced underperformed in Operations: actual 1115.16 missed target 1175.46 slightly (-5.13%).",
+    "recommended_action": "Note Units_Produced shortfall in the Operations weekly variance log."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": -5.87,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced underperformed in Operations: actual 1045.79 missed target 1111.05 slightly (-5.87%).",
+    "recommended_action": "Note Units_Produced shortfall in the Operations weekly variance log."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": 2.29,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced in Operations exceeded target 1192.29 slightly (2.29%) - favorable but verify driver.",
+    "recommended_action": "No action - Units_Produced within acceptable Operations tolerance."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": 5.39,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced in Operations exceeded target 1227.67 slightly (5.39%) - favorable but verify driver.",
+    "recommended_action": "No action - Units_Produced within acceptable Operations tolerance."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": 11.61,
+    "risk_score": "High",
+    "root_cause_alert": "Revenue in Finance exceeded target 50065.01 moderately (11.61%) - favorable but verify driver.",
+    "recommended_action": "Validate the Revenue upside driver in Finance; confirm sustainability and book an upside forecast revision."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": 18.54,
+    "risk_score": "High",
+    "root_cause_alert": "Units_Produced in Operations exceeded target 1173.53 moderately (18.54%) - favorable but verify driver.",
+    "recommended_action": "Validate the Units_Produced upside in Operations; confirm the driver is real and sustainable before updating the forecast."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": -6.45,
+    "risk_score": "Low",
+    "root_cause_alert": "Revenue underperformed in Finance: actual 49699.71 missed target 53128.34 slightly (-6.45%).",
+    "recommended_action": "Flag Revenue shortfall to Finance owner for next-cycle planning."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": 3.53,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced in Operations exceeded target 1092.91 slightly (3.53%) - favorable but verify driver.",
+    "recommended_action": "No action - Units_Produced within acceptable Operations tolerance."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": 4.85,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced in Operations exceeded target 1177.65 slightly (4.85%) - favorable but verify driver.",
+    "recommended_action": "No action - Units_Produced within acceptable Operations tolerance."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": -0.47,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced underperformed in Operations: actual 1241.49 missed target 1247.32 slightly (-0.47%).",
+    "recommended_action": "Note Units_Produced shortfall in the Operations weekly variance log."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": -13.24,
+    "risk_score": "High",
+    "root_cause_alert": "Revenue underperformed in Finance: actual 39706.64 missed target 45766.03 moderately (-13.24%).",
+    "recommended_action": "Trigger Finance commercial review this week; reforecast and deploy tactical promotion or save-the-deal motions."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": 5.93,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced in Operations exceeded target 1155.35 slightly (5.93%) - favorable but verify driver.",
+    "recommended_action": "No action - Units_Produced within acceptable Operations tolerance."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": -9.76,
+    "risk_score": "Low",
+    "root_cause_alert": "Revenue underperformed in Finance: actual 46087.51 missed target 51070.47 slightly (-9.76%).",
+    "recommended_action": "Flag Revenue shortfall to Finance owner for next-cycle planning."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": 264.08,
+    "risk_score": "Critical",
+    "root_cause_alert": "Units_Produced in Operations exceeded target 1217.32 severely (264.08%) - favorable but verify driver.",
+    "recommended_action": "Validate the Units_Produced upside in Operations; confirm the driver is real and sustainable before updating the forecast."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": -8.13,
+    "risk_score": "Low",
+    "root_cause_alert": "Revenue underperformed in Finance: actual 48854.76 missed target 53175.56 slightly (-8.13%).",
+    "recommended_action": "Flag Revenue shortfall to Finance owner for next-cycle planning."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": -5.62,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced underperformed in Operations: actual 1009.37 missed target 1069.43 slightly (-5.62%).",
+    "recommended_action": "Note Units_Produced shortfall in the Operations weekly variance log."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": -10.55,
+    "risk_score": "High",
+    "root_cause_alert": "Revenue underperformed in Finance: actual 40140.34 missed target 44872.5 moderately (-10.55%).",
+    "recommended_action": "Trigger Finance commercial review this week; reforecast and deploy tactical promotion or save-the-deal motions."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": 13.62,
+    "risk_score": "High",
+    "root_cause_alert": "Revenue in Finance exceeded target 52248.87 moderately (13.62%) - favorable but verify driver.",
+    "recommended_action": "Validate the Revenue upside driver in Finance; confirm sustainability and book an upside forecast revision."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": -11.94,
+    "risk_score": "High",
+    "root_cause_alert": "Units_Produced underperformed in Operations: actual 997.96 missed target 1133.31 moderately (-11.94%).",
+    "recommended_action": "Brief Operations owner on Units_Produced variance; require a remediation plan within this week."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": -10.78,
+    "risk_score": "High",
+    "root_cause_alert": "Revenue underperformed in Finance: actual 47540.39 missed target 53283.99 moderately (-10.78%).",
+    "recommended_action": "Trigger Finance commercial review this week; reforecast and deploy tactical promotion or save-the-deal motions."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": 3.66,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced in Operations exceeded target 1081.67 slightly (3.66%) - favorable but verify driver.",
+    "recommended_action": "No action - Units_Produced within acceptable Operations tolerance."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": -4.64,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced underperformed in Operations: actual 1128.5 missed target 1183.47 slightly (-4.64%).",
+    "recommended_action": "Note Units_Produced shortfall in the Operations weekly variance log."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": -2.71,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced underperformed in Operations: actual 1174.09 missed target 1206.84 slightly (-2.71%).",
+    "recommended_action": "Note Units_Produced shortfall in the Operations weekly variance log."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": -3.89,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced underperformed in Operations: actual 1334.89 missed target 1388.95 slightly (-3.89%).",
+    "recommended_action": "Note Units_Produced shortfall in the Operations weekly variance log."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": -3.28,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced underperformed in Operations: actual 1072.26 missed target 1108.66 slightly (-3.28%).",
+    "recommended_action": "Note Units_Produced shortfall in the Operations weekly variance log."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": 4.11,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced in Operations exceeded target 1158.72 slightly (4.11%) - favorable but verify driver.",
+    "recommended_action": "No action - Units_Produced within acceptable Operations tolerance."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": 3.41,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced in Operations exceeded target 1000.85 slightly (3.41%) - favorable but verify driver.",
+    "recommended_action": "No action - Units_Produced within acceptable Operations tolerance."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": 5.42,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced in Operations exceeded target 1145.87 slightly (5.42%) - favorable but verify driver.",
+    "recommended_action": "No action - Units_Produced within acceptable Operations tolerance."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": 3.47,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced in Operations exceeded target 1195.24 slightly (3.47%) - favorable but verify driver.",
+    "recommended_action": "No action - Units_Produced within acceptable Operations tolerance."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": 3.02,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced in Operations exceeded target 1160.86 slightly (3.02%) - favorable but verify driver.",
+    "recommended_action": "No action - Units_Produced within acceptable Operations tolerance."
+  },
+  {
+    "metric_name": "Units_Produced",
+    "domain": "Operations",
+    "variance_percentage": -4.33,
+    "risk_score": "Low",
+    "root_cause_alert": "Units_Produced underperformed in Operations: actual 1307.24 missed target 1366.38 slightly (-4.33%).",
+    "recommended_action": "Note Units_Produced shortfall in the Operations weekly variance log."
+  },
+  {
+    "metric_name": "Revenue",
+    "domain": "Finance",
+    "variance_percentage": -3.93,
+    "risk_score": "Low",
+    "root_cause_alert": "Revenue underperformed in Finance: actual 47519.16 missed target 49464.03 slightly (-3.93%).",
+    "recommended_action": "Flag Revenue shortfall to Finance owner for next-cycle planning."
+  }
+]
