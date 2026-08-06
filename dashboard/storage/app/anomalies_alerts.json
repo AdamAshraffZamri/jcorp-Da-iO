@@ -1,1266 +1,2147 @@
-[
-  {
-    "date_detected": "2025-01-08",
-    "primary_domain": "Agribusiness",
-    "subsidiary": "Johor Plantation Group",
-    "metric_name": "Daily_Revenue_RM_Mil",
-    "target_value": 4.67,
-    "actual_value": 2.71,
-    "variance_percentage": -42.0,
-    "risk_score": "Critical",
-    "root_cause_alert": "Revenue fell below target — potential demand contraction, project delays, or commodity price headwinds.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Escalate to Group CFO and segment CEO immediately. Initiate emergency revenue audit, review top-5 contracts, and assess impact on Group annual guidance.",
-    "correlated_domain": "Real estate and infrastructure",
-    "correlation_note": "Agribusiness operational disruption detected within ±1 day — plantation output shortfall is likely constraining land-bank revenue and project cash flows in Real Estate & Infrastructure.",
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-08",
-    "primary_domain": "Real estate and infrastructure",
-    "subsidiary": "Damansara Assets Sdn Bhd",
-    "metric_name": "Daily_Revenue_RM_Mil",
-    "target_value": 3.78,
-    "actual_value": 2.34,
-    "variance_percentage": -38.0,
-    "risk_score": "Critical",
-    "root_cause_alert": "Revenue fell below target — potential demand contraction, project delays, or commodity price headwinds.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Escalate to Group CFO and segment CEO immediately. Initiate emergency revenue audit, review top-5 contracts, and assess impact on Group annual guidance.",
-    "correlated_domain": "Agribusiness",
-    "correlation_note": "Real estate & infrastructure anomaly detected within ±1 day — property revenue shortfall may signal cashflow pressure upstream to Agribusiness supply chain and shared financing facilities.",
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-12",
-    "primary_domain": "Real estate and infrastructure",
-    "subsidiary": "JCIT",
-    "metric_name": "Daily_Finance_Cost_RM_Mil",
-    "target_value": 0.37,
-    "actual_value": 0.57,
-    "variance_percentage": 55.01,
-    "risk_score": "Critical",
-    "root_cause_alert": "Finance costs spiked above target — likely unplanned loan drawdown, interest rate movement, or new lease obligations.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Alert Group Treasurer and Board Finance Committee. Review all active credit facilities, identify unplanned drawdowns, and assess interest rate exposure.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-18",
-    "primary_domain": "Others",
-    "subsidiary": "Johor Port Sdn Bhd",
-    "metric_name": "Outlet_Transactions",
-    "target_value": 3195.0,
-    "actual_value": 1980.9,
-    "variance_percentage": -38.0,
-    "risk_score": "Critical",
-    "root_cause_alert": "Outlet transactions below target — consumer sentiment decline or supply interruption.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Escalate to QSR Brands CEO. Review outlet-level POS data, identify affected locations, and launch targeted promotional response.",
-    "correlated_domain": "Wellness and healthcare",
-    "correlation_note": "Others (QSR/Outlets) anomaly detected within ±1 day — consumer-facing disruption may cascade to Wellness & Healthcare demand signals given shared demographic exposure.",
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-18",
-    "primary_domain": "Wellness and healthcare",
-    "subsidiary": "KPJ Johor Specialist Hospital",
-    "metric_name": "Daily_Revenue_RM_Mil",
-    "target_value": 11.29,
-    "actual_value": 7.9,
-    "variance_percentage": -30.0,
-    "risk_score": "Critical",
-    "root_cause_alert": "Revenue fell below target — potential demand contraction, project delays, or commodity price headwinds.",
-    "7_day_forecast": "100% probability of recurring failure",
-    "recommended_action": "Escalate to Group CFO and segment CEO immediately. Initiate emergency revenue audit, review top-5 contracts, and assess impact on Group annual guidance.",
-    "correlated_domain": "Others",
-    "correlation_note": "KPJ Healthcare anomaly detected within ±1 day — patient admission / revenue drop may indicate systemic consumer confidence issue also affecting QSR outlet transactions.",
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-18",
-    "primary_domain": "Wellness and healthcare",
-    "subsidiary": "KPJ Johor Specialist Hospital",
-    "metric_name": "Patient_Admissions",
-    "target_value": 1215.0,
-    "actual_value": 753.3,
-    "variance_percentage": -38.0,
-    "risk_score": "Critical",
-    "root_cause_alert": "Patient admissions collapsed below target — IT/booking system outage, competitor pressure, or service disruption.",
-    "7_day_forecast": "100% probability of recurring failure",
-    "recommended_action": "Escalate to KPJ Healthcare CEO. Investigate booking system and IT infrastructure. Activate patient diversion protocol and notify Ministry of Health if required.",
-    "correlated_domain": "Others",
-    "correlation_note": "KPJ Healthcare anomaly detected within ±1 day — patient admission / revenue drop may indicate systemic consumer confidence issue also affecting QSR outlet transactions.",
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-22",
-    "primary_domain": "Others",
-    "subsidiary": "QSR Brands (M) Holdings Bhd",
-    "metric_name": "Daily_Revenue_RM_Mil",
-    "target_value": 0.73,
-    "actual_value": 1.08,
-    "variance_percentage": 47.99,
-    "risk_score": "Critical",
-    "root_cause_alert": "Revenue exceeded target — possible demand surge, new contract wins, or favourable commodity pricing.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Escalate to Group CFO and segment CEO immediately. Initiate emergency revenue audit, review top-5 contracts, and assess impact on Group annual guidance.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-22",
-    "primary_domain": "Others",
-    "subsidiary": "QSR Brands (M) Holdings Bhd",
-    "metric_name": "Daily_Finance_Cost_RM_Mil",
-    "target_value": 0.48,
-    "actual_value": 0.65,
-    "variance_percentage": 35.01,
-    "risk_score": "Critical",
-    "root_cause_alert": "Finance costs spiked above target — likely unplanned loan drawdown, interest rate movement, or new lease obligations.",
-    "7_day_forecast": "100% probability of recurring failure",
-    "recommended_action": "Alert Group Treasurer and Board Finance Committee. Review all active credit facilities, identify unplanned drawdowns, and assess interest rate exposure.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-26",
-    "primary_domain": "Agribusiness",
-    "subsidiary": "Johor Plantation Group",
-    "metric_name": "FFB_Processed_Tonnes",
-    "target_value": 4457.0,
-    "actual_value": 2495.92,
-    "variance_percentage": -44.0,
-    "risk_score": "Critical",
-    "root_cause_alert": "FFB processed tonnes fell below target — machinery breakdown, flooding, or pest outbreak in plantation.",
-    "7_day_forecast": "50% probability of recurring failure",
-    "recommended_action": "Deploy emergency maintenance team to affected mills. Notify Group Operations Director and activate business continuity plan. Assess crop loss impact.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-26",
-    "primary_domain": "Agribusiness",
-    "subsidiary": "Johor Plantation Group",
-    "metric_name": "Daily_Gross_Profit_RM_Mil",
-    "target_value": 2.04,
-    "actual_value": 1.33,
-    "variance_percentage": -35.0,
-    "risk_score": "Critical",
-    "root_cause_alert": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
-    "7_day_forecast": "94% probability of recurring failure",
-    "recommended_action": "Convene emergency cost-review committee. Engage procurement on input cost hedging and review pricing strategy with commercial team.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-01",
-    "primary_domain": "Others",
-    "subsidiary": "QSR Brands (M) Holdings Bhd",
-    "metric_name": "Daily_Gross_Profit_RM_Mil",
-    "target_value": 0.36,
-    "actual_value": 0.39,
-    "variance_percentage": 10.31,
-    "risk_score": "High",
-    "root_cause_alert": "Gross profit above target — improved cost efficiencies or higher-margin product mix.",
-    "7_day_forecast": "50% probability of recurring failure",
-    "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-01",
-    "primary_domain": "Agribusiness",
-    "subsidiary": "Kulim (Malaysia) Berhad",
-    "metric_name": "Daily_Finance_Cost_RM_Mil",
-    "target_value": 0.16,
-    "actual_value": 0.19,
-    "variance_percentage": 12.86,
-    "risk_score": "High",
-    "root_cause_alert": "Finance costs spiked above target — likely unplanned loan drawdown, interest rate movement, or new lease obligations.",
-    "7_day_forecast": "50% probability of recurring failure",
-    "recommended_action": "Review loan utilisation report. Confirm all drawdowns are approved and evaluate refinancing options to reduce cost.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-02",
-    "primary_domain": "Agribusiness",
-    "subsidiary": "Johor Plantation Group",
-    "metric_name": "FFB_Processed_Tonnes",
-    "target_value": 4521.0,
-    "actual_value": 3955.0,
-    "variance_percentage": -12.52,
-    "risk_score": "High",
-    "root_cause_alert": "FFB processed tonnes fell below target — machinery breakdown, flooding, or pest outbreak in plantation.",
-    "7_day_forecast": "50% probability of recurring failure",
-    "recommended_action": "Increase mill monitoring frequency. Review equipment service logs and assess estate-level yield data for harvest disruptions.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-02",
-    "primary_domain": "Wellness and healthcare",
-    "subsidiary": "KPJ Johor Specialist Hospital",
-    "metric_name": "Patient_Admissions",
-    "target_value": 1213.0,
-    "actual_value": 1370.0,
-    "variance_percentage": 12.94,
-    "risk_score": "High",
-    "root_cause_alert": "Patient admissions above target — seasonal demand peak or expanded bed capacity.",
-    "7_day_forecast": "50% probability of recurring failure",
-    "recommended_action": "Review admissions data by hospital unit. Identify specific wards/services affected and engage clinical operations team.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-02",
-    "primary_domain": "Real estate and infrastructure",
-    "subsidiary": "Damansara Assets Sdn Bhd",
-    "metric_name": "Daily_Revenue_RM_Mil",
-    "target_value": 3.85,
-    "actual_value": 4.29,
-    "variance_percentage": 11.41,
-    "risk_score": "High",
-    "root_cause_alert": "Revenue exceeded target — possible demand surge, new contract wins, or favourable commodity pricing.",
-    "7_day_forecast": "50% probability of recurring failure",
-    "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-02",
-    "primary_domain": "Real estate and infrastructure",
-    "subsidiary": "Damansara Assets Sdn Bhd",
-    "metric_name": "Daily_Gross_Profit_RM_Mil",
-    "target_value": 1.09,
-    "actual_value": 0.98,
-    "variance_percentage": -10.73,
-    "risk_score": "High",
-    "root_cause_alert": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
-    "7_day_forecast": "100% probability of recurring failure",
-    "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-03",
-    "primary_domain": "Others",
-    "subsidiary": "Johor Port Sdn Bhd",
-    "metric_name": "Daily_Gross_Profit_RM_Mil",
-    "target_value": 0.34,
-    "actual_value": 0.42,
-    "variance_percentage": 23.31,
-    "risk_score": "High",
-    "root_cause_alert": "Gross profit above target — improved cost efficiencies or higher-margin product mix.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-03",
-    "primary_domain": "Real estate and infrastructure",
-    "subsidiary": "JCIT",
-    "metric_name": "Daily_Gross_Profit_RM_Mil",
-    "target_value": 1.15,
-    "actual_value": 0.91,
-    "variance_percentage": -21.1,
-    "risk_score": "High",
-    "root_cause_alert": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-06",
-    "primary_domain": "Real estate and infrastructure",
-    "subsidiary": "JCIT",
-    "metric_name": "Daily_Revenue_RM_Mil",
-    "target_value": 3.82,
-    "actual_value": 3.17,
-    "variance_percentage": -17.02,
-    "risk_score": "High",
-    "root_cause_alert": "Revenue fell below target — potential demand contraction, project delays, or commodity price headwinds.",
-    "7_day_forecast": "100% probability of recurring failure",
-    "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-06",
-    "primary_domain": "Real estate and infrastructure",
-    "subsidiary": "JCIT",
-    "metric_name": "Daily_Gross_Profit_RM_Mil",
-    "target_value": 1.11,
-    "actual_value": 1.44,
-    "variance_percentage": 29.3,
-    "risk_score": "High",
-    "root_cause_alert": "Gross profit above target — improved cost efficiencies or higher-margin product mix.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-07",
-    "primary_domain": "Agribusiness",
-    "subsidiary": "Kulim (Malaysia) Berhad",
-    "metric_name": "Daily_Gross_Profit_RM_Mil",
-    "target_value": 1.93,
-    "actual_value": 1.69,
-    "variance_percentage": -12.54,
-    "risk_score": "High",
-    "root_cause_alert": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-08",
-    "primary_domain": "Others",
-    "subsidiary": "Sindora Berhad",
-    "metric_name": "Daily_Revenue_RM_Mil",
-    "target_value": 0.76,
-    "actual_value": 0.84,
-    "variance_percentage": 10.68,
-    "risk_score": "High",
-    "root_cause_alert": "Revenue exceeded target — possible demand surge, new contract wins, or favourable commodity pricing.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-08",
-    "primary_domain": "Agribusiness",
-    "subsidiary": "Johor Plantation Group",
-    "metric_name": "Daily_Gross_Profit_RM_Mil",
-    "target_value": 1.96,
-    "actual_value": 1.76,
-    "variance_percentage": -10.5,
-    "risk_score": "High",
-    "root_cause_alert": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
-    "7_day_forecast": "100% probability of recurring failure",
-    "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-09",
-    "primary_domain": "Others",
-    "subsidiary": "Johor Port Sdn Bhd",
-    "metric_name": "Daily_Finance_Cost_RM_Mil",
-    "target_value": 0.46,
-    "actual_value": 0.54,
-    "variance_percentage": 15.48,
-    "risk_score": "High",
-    "root_cause_alert": "Finance costs spiked above target — likely unplanned loan drawdown, interest rate movement, or new lease obligations.",
-    "7_day_forecast": "100% probability of recurring failure",
-    "recommended_action": "Review loan utilisation report. Confirm all drawdowns are approved and evaluate refinancing options to reduce cost.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-09",
-    "primary_domain": "Real estate and infrastructure",
-    "subsidiary": "JCIT",
-    "metric_name": "Daily_Revenue_RM_Mil",
-    "target_value": 3.65,
-    "actual_value": 3.24,
-    "variance_percentage": -11.2,
-    "risk_score": "High",
-    "root_cause_alert": "Revenue fell below target — potential demand contraction, project delays, or commodity price headwinds.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-09",
-    "primary_domain": "Wellness and healthcare",
-    "subsidiary": "KPJ Healthcare Berhad",
-    "metric_name": "Patient_Admissions",
-    "target_value": 1176.0,
-    "actual_value": 1050.0,
-    "variance_percentage": -10.71,
-    "risk_score": "High",
-    "root_cause_alert": "Patient admissions collapsed below target — IT/booking system outage, competitor pressure, or service disruption.",
-    "7_day_forecast": "100% probability of recurring failure",
-    "recommended_action": "Review admissions data by hospital unit. Identify specific wards/services affected and engage clinical operations team.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-09",
-    "primary_domain": "Real estate and infrastructure",
-    "subsidiary": "JCIT",
-    "metric_name": "Daily_Gross_Profit_RM_Mil",
-    "target_value": 1.1,
-    "actual_value": 0.97,
-    "variance_percentage": -11.95,
-    "risk_score": "High",
-    "root_cause_alert": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
-    "7_day_forecast": "100% probability of recurring failure",
-    "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-09",
-    "primary_domain": "Agribusiness",
-    "subsidiary": "Kulim (Malaysia) Berhad",
-    "metric_name": "FFB_Processed_Tonnes",
-    "target_value": 4306.0,
-    "actual_value": 4767.0,
-    "variance_percentage": 10.71,
-    "risk_score": "High",
-    "root_cause_alert": "Fresh fruit bunch processing exceeded target — peak harvest season or expanded capacity.",
-    "7_day_forecast": "100% probability of recurring failure",
-    "recommended_action": "Increase mill monitoring frequency. Review equipment service logs and assess estate-level yield data for harvest disruptions.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-10",
-    "primary_domain": "Real estate and infrastructure",
-    "subsidiary": "JCorp Properties Sdn Bhd",
-    "metric_name": "Units_Under_Construction",
-    "target_value": 83.0,
-    "actual_value": 73.0,
-    "variance_percentage": -12.05,
-    "risk_score": "High",
-    "root_cause_alert": "Construction units below target — regulatory delays, contractor issues, or material shortages.",
-    "7_day_forecast": "50% probability of recurring failure",
-    "recommended_action": "Conduct site progress review. Identify bottlenecks in materials procurement and sub-contractor performance.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-10",
-    "primary_domain": "Others",
-    "subsidiary": "QSR Brands (M) Holdings Bhd",
-    "metric_name": "Outlet_Transactions",
-    "target_value": 3184.0,
-    "actual_value": 3614.0,
-    "variance_percentage": 13.51,
-    "risk_score": "High",
-    "root_cause_alert": "Outlet transactions above target — promotional campaign success or new outlet openings.",
-    "7_day_forecast": "50% probability of recurring failure",
-    "recommended_action": "Analyse transaction data by outlet cluster. Review stock availability and escalate to franchise operations team.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-11",
-    "primary_domain": "Others",
-    "subsidiary": "Sindora Berhad",
-    "metric_name": "Daily_Gross_Profit_RM_Mil",
-    "target_value": 0.35,
-    "actual_value": 0.31,
-    "variance_percentage": -13.34,
-    "risk_score": "High",
-    "root_cause_alert": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
-    "7_day_forecast": "100% probability of recurring failure",
-    "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-11",
-    "primary_domain": "Agribusiness",
-    "subsidiary": "Kulim (Malaysia) Berhad",
-    "metric_name": "Daily_Gross_Profit_RM_Mil",
-    "target_value": 1.93,
-    "actual_value": 1.55,
-    "variance_percentage": -19.91,
-    "risk_score": "High",
-    "root_cause_alert": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
-    "7_day_forecast": "100% probability of recurring failure",
-    "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-11",
-    "primary_domain": "Agribusiness",
-    "subsidiary": "Kulim (Malaysia) Berhad",
-    "metric_name": "Daily_Revenue_RM_Mil",
-    "target_value": 4.63,
-    "actual_value": 4.16,
-    "variance_percentage": -10.04,
-    "risk_score": "High",
-    "root_cause_alert": "Revenue fell below target — potential demand contraction, project delays, or commodity price headwinds.",
-    "7_day_forecast": "100% probability of recurring failure",
-    "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-12",
-    "primary_domain": "Real estate and infrastructure",
-    "subsidiary": "JCIT",
-    "metric_name": "Daily_Revenue_RM_Mil",
-    "target_value": 3.76,
-    "actual_value": 4.16,
-    "variance_percentage": 10.68,
-    "risk_score": "High",
-    "root_cause_alert": "Revenue exceeded target — possible demand surge, new contract wins, or favourable commodity pricing.",
-    "7_day_forecast": "100% probability of recurring failure",
-    "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-12",
-    "primary_domain": "Others",
-    "subsidiary": "Johor Port Sdn Bhd",
-    "metric_name": "Daily_Gross_Profit_RM_Mil",
-    "target_value": 0.36,
-    "actual_value": 0.43,
-    "variance_percentage": 18.78,
-    "risk_score": "High",
-    "root_cause_alert": "Gross profit above target — improved cost efficiencies or higher-margin product mix.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-13",
-    "primary_domain": "Real estate and infrastructure",
-    "subsidiary": "JCorp Properties Sdn Bhd",
-    "metric_name": "Daily_Revenue_RM_Mil",
-    "target_value": 3.51,
-    "actual_value": 4.23,
-    "variance_percentage": 20.48,
-    "risk_score": "High",
-    "root_cause_alert": "Revenue exceeded target — possible demand surge, new contract wins, or favourable commodity pricing.",
-    "7_day_forecast": "100% probability of recurring failure",
-    "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-13",
-    "primary_domain": "Agribusiness",
-    "subsidiary": "Kulim (Malaysia) Berhad",
-    "metric_name": "Daily_Gross_Profit_RM_Mil",
-    "target_value": 1.93,
-    "actual_value": 1.56,
-    "variance_percentage": -19.19,
-    "risk_score": "High",
-    "root_cause_alert": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-13",
-    "primary_domain": "Agribusiness",
-    "subsidiary": "Kulim (Malaysia) Berhad",
-    "metric_name": "Daily_Finance_Cost_RM_Mil",
-    "target_value": 0.17,
-    "actual_value": 0.19,
-    "variance_percentage": 10.35,
-    "risk_score": "High",
-    "root_cause_alert": "Finance costs spiked above target — likely unplanned loan drawdown, interest rate movement, or new lease obligations.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Review loan utilisation report. Confirm all drawdowns are approved and evaluate refinancing options to reduce cost.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-13",
-    "primary_domain": "Real estate and infrastructure",
-    "subsidiary": "JCorp Properties Sdn Bhd",
-    "metric_name": "Daily_Gross_Profit_RM_Mil",
-    "target_value": 1.08,
-    "actual_value": 1.33,
-    "variance_percentage": 23.4,
-    "risk_score": "High",
-    "root_cause_alert": "Gross profit above target — improved cost efficiencies or higher-margin product mix.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-16",
-    "primary_domain": "Agribusiness",
-    "subsidiary": "Johor Plantation Group",
-    "metric_name": "Daily_Gross_Profit_RM_Mil",
-    "target_value": 1.96,
-    "actual_value": 2.32,
-    "variance_percentage": 18.23,
-    "risk_score": "High",
-    "root_cause_alert": "Gross profit above target — improved cost efficiencies or higher-margin product mix.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-16",
-    "primary_domain": "Real estate and infrastructure",
-    "subsidiary": "JCorp Properties Sdn Bhd",
-    "metric_name": "Daily_Revenue_RM_Mil",
-    "target_value": 3.82,
-    "actual_value": 4.34,
-    "variance_percentage": 13.62,
-    "risk_score": "High",
-    "root_cause_alert": "Revenue exceeded target — possible demand surge, new contract wins, or favourable commodity pricing.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-16",
-    "primary_domain": "Others",
-    "subsidiary": "QSR Brands (M) Holdings Bhd",
-    "metric_name": "Daily_Gross_Profit_RM_Mil",
-    "target_value": 0.35,
-    "actual_value": 0.39,
-    "variance_percentage": 12.8,
-    "risk_score": "High",
-    "root_cause_alert": "Gross profit above target — improved cost efficiencies or higher-margin product mix.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-16",
-    "primary_domain": "Real estate and infrastructure",
-    "subsidiary": "JCorp Properties Sdn Bhd",
-    "metric_name": "Daily_Gross_Profit_RM_Mil",
-    "target_value": 1.1,
-    "actual_value": 0.84,
-    "variance_percentage": -23.56,
-    "risk_score": "High",
-    "root_cause_alert": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-17",
-    "primary_domain": "Others",
-    "subsidiary": "Sindora Berhad",
-    "metric_name": "Daily_Revenue_RM_Mil",
-    "target_value": 0.71,
-    "actual_value": 0.62,
-    "variance_percentage": -12.85,
-    "risk_score": "High",
-    "root_cause_alert": "Revenue fell below target — potential demand contraction, project delays, or commodity price headwinds.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-17",
-    "primary_domain": "Others",
-    "subsidiary": "Sindora Berhad",
-    "metric_name": "Outlet_Transactions",
-    "target_value": 3180.0,
-    "actual_value": 2705.0,
-    "variance_percentage": -14.94,
-    "risk_score": "High",
-    "root_cause_alert": "Outlet transactions below target — consumer sentiment decline or supply interruption.",
-    "7_day_forecast": "100% probability of recurring failure",
-    "recommended_action": "Analyse transaction data by outlet cluster. Review stock availability and escalate to franchise operations team.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-17",
-    "primary_domain": "Real estate and infrastructure",
-    "subsidiary": "Damansara Assets Sdn Bhd",
-    "metric_name": "Daily_Finance_Cost_RM_Mil",
-    "target_value": 0.36,
-    "actual_value": 0.41,
-    "variance_percentage": 14.23,
-    "risk_score": "High",
-    "root_cause_alert": "Finance costs spiked above target — likely unplanned loan drawdown, interest rate movement, or new lease obligations.",
-    "7_day_forecast": "100% probability of recurring failure",
-    "recommended_action": "Review loan utilisation report. Confirm all drawdowns are approved and evaluate refinancing options to reduce cost.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-18",
-    "primary_domain": "Others",
-    "subsidiary": "Johor Port Sdn Bhd",
-    "metric_name": "Daily_Revenue_RM_Mil",
-    "target_value": 0.7,
-    "actual_value": 0.79,
-    "variance_percentage": 12.2,
-    "risk_score": "High",
-    "root_cause_alert": "Revenue exceeded target — possible demand surge, new contract wins, or favourable commodity pricing.",
-    "7_day_forecast": "100% probability of recurring failure",
-    "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-18",
-    "primary_domain": "Real estate and infrastructure",
-    "subsidiary": "JCIT",
-    "metric_name": "Daily_Gross_Profit_RM_Mil",
-    "target_value": 1.09,
-    "actual_value": 0.97,
-    "variance_percentage": -10.25,
-    "risk_score": "High",
-    "root_cause_alert": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-18",
-    "primary_domain": "Real estate and infrastructure",
-    "subsidiary": "JCIT",
-    "metric_name": "Daily_Finance_Cost_RM_Mil",
-    "target_value": 0.38,
-    "actual_value": 0.43,
-    "variance_percentage": 13.99,
-    "risk_score": "High",
-    "root_cause_alert": "Finance costs spiked above target — likely unplanned loan drawdown, interest rate movement, or new lease obligations.",
-    "7_day_forecast": "100% probability of recurring failure",
-    "recommended_action": "Review loan utilisation report. Confirm all drawdowns are approved and evaluate refinancing options to reduce cost.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-18",
-    "primary_domain": "Others",
-    "subsidiary": "Johor Port Sdn Bhd",
-    "metric_name": "Daily_Finance_Cost_RM_Mil",
-    "target_value": 0.46,
-    "actual_value": 0.39,
-    "variance_percentage": -15.36,
-    "risk_score": "High",
-    "root_cause_alert": "Finance costs below target — early loan repayment or favourable refinancing.",
-    "7_day_forecast": "100% probability of recurring failure",
-    "recommended_action": "Review loan utilisation report. Confirm all drawdowns are approved and evaluate refinancing options to reduce cost.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-18",
-    "primary_domain": "Agribusiness",
-    "subsidiary": "Johor Plantation Group",
-    "metric_name": "Daily_Revenue_RM_Mil",
-    "target_value": 4.55,
-    "actual_value": 5.14,
-    "variance_percentage": 12.75,
-    "risk_score": "High",
-    "root_cause_alert": "Revenue exceeded target — possible demand surge, new contract wins, or favourable commodity pricing.",
-    "7_day_forecast": "100% probability of recurring failure",
-    "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-19",
-    "primary_domain": "Real estate and infrastructure",
-    "subsidiary": "JCorp Properties Sdn Bhd",
-    "metric_name": "Daily_Gross_Profit_RM_Mil",
-    "target_value": 1.1,
-    "actual_value": 1.25,
-    "variance_percentage": 13.9,
-    "risk_score": "High",
-    "root_cause_alert": "Gross profit above target — improved cost efficiencies or higher-margin product mix.",
-    "7_day_forecast": "100% probability of recurring failure",
-    "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-19",
-    "primary_domain": "Others",
-    "subsidiary": "QSR Brands (M) Holdings Bhd",
-    "metric_name": "Outlet_Transactions",
-    "target_value": 3070.0,
-    "actual_value": 2637.0,
-    "variance_percentage": -14.1,
-    "risk_score": "High",
-    "root_cause_alert": "Outlet transactions below target — consumer sentiment decline or supply interruption.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Analyse transaction data by outlet cluster. Review stock availability and escalate to franchise operations team.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-19",
-    "primary_domain": "Real estate and infrastructure",
-    "subsidiary": "JCorp Properties Sdn Bhd",
-    "metric_name": "Daily_Revenue_RM_Mil",
-    "target_value": 3.82,
-    "actual_value": 4.37,
-    "variance_percentage": 14.25,
-    "risk_score": "High",
-    "root_cause_alert": "Revenue exceeded target — possible demand surge, new contract wins, or favourable commodity pricing.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-19",
-    "primary_domain": "Real estate and infrastructure",
-    "subsidiary": "JCorp Properties Sdn Bhd",
-    "metric_name": "Units_Under_Construction",
-    "target_value": 87.0,
-    "actual_value": 97.0,
-    "variance_percentage": 11.49,
-    "risk_score": "High",
-    "root_cause_alert": "Construction units above target — accelerated project milestones.",
-    "7_day_forecast": "100% probability of recurring failure",
-    "recommended_action": "Conduct site progress review. Identify bottlenecks in materials procurement and sub-contractor performance.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-19",
-    "primary_domain": "Agribusiness",
-    "subsidiary": "Kulim (Malaysia) Berhad",
-    "metric_name": "Daily_Finance_Cost_RM_Mil",
-    "target_value": 0.16,
-    "actual_value": 0.15,
-    "variance_percentage": -10.94,
-    "risk_score": "High",
-    "root_cause_alert": "Finance costs below target — early loan repayment or favourable refinancing.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Review loan utilisation report. Confirm all drawdowns are approved and evaluate refinancing options to reduce cost.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-20",
-    "primary_domain": "Others",
-    "subsidiary": "Sindora Berhad",
-    "metric_name": "Outlet_Transactions",
-    "target_value": 3309.0,
-    "actual_value": 3641.0,
-    "variance_percentage": 10.03,
-    "risk_score": "High",
-    "root_cause_alert": "Outlet transactions above target — promotional campaign success or new outlet openings.",
-    "7_day_forecast": "100% probability of recurring failure",
-    "recommended_action": "Analyse transaction data by outlet cluster. Review stock availability and escalate to franchise operations team.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-20",
-    "primary_domain": "Real estate and infrastructure",
-    "subsidiary": "Damansara Assets Sdn Bhd",
-    "metric_name": "Daily_Gross_Profit_RM_Mil",
-    "target_value": 1.12,
-    "actual_value": 1.24,
-    "variance_percentage": 11.32,
-    "risk_score": "High",
-    "root_cause_alert": "Gross profit above target — improved cost efficiencies or higher-margin product mix.",
-    "7_day_forecast": "100% probability of recurring failure",
-    "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-20",
-    "primary_domain": "Real estate and infrastructure",
-    "subsidiary": "Damansara Assets Sdn Bhd",
-    "metric_name": "Daily_Revenue_RM_Mil",
-    "target_value": 3.72,
-    "actual_value": 4.11,
-    "variance_percentage": 10.35,
-    "risk_score": "High",
-    "root_cause_alert": "Revenue exceeded target — possible demand surge, new contract wins, or favourable commodity pricing.",
-    "7_day_forecast": "100% probability of recurring failure",
-    "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-21",
-    "primary_domain": "Others",
-    "subsidiary": "Johor Port Sdn Bhd",
-    "metric_name": "Daily_Revenue_RM_Mil",
-    "target_value": 0.71,
-    "actual_value": 0.79,
-    "variance_percentage": 10.32,
-    "risk_score": "High",
-    "root_cause_alert": "Revenue exceeded target — possible demand surge, new contract wins, or favourable commodity pricing.",
-    "7_day_forecast": "100% probability of recurring failure",
-    "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-21",
-    "primary_domain": "Real estate and infrastructure",
-    "subsidiary": "JCIT",
-    "metric_name": "Daily_Gross_Profit_RM_Mil",
-    "target_value": 1.16,
-    "actual_value": 1.27,
-    "variance_percentage": 10.0,
-    "risk_score": "High",
-    "root_cause_alert": "Gross profit above target — improved cost efficiencies or higher-margin product mix.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-21",
-    "primary_domain": "Agribusiness",
-    "subsidiary": "Kulim (Malaysia) Berhad",
-    "metric_name": "Daily_Revenue_RM_Mil",
-    "target_value": 4.84,
-    "actual_value": 5.75,
-    "variance_percentage": 18.77,
-    "risk_score": "High",
-    "root_cause_alert": "Revenue exceeded target — possible demand surge, new contract wins, or favourable commodity pricing.",
-    "7_day_forecast": "100% probability of recurring failure",
-    "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-21",
-    "primary_domain": "Others",
-    "subsidiary": "Johor Port Sdn Bhd",
-    "metric_name": "Daily_Gross_Profit_RM_Mil",
-    "target_value": 0.35,
-    "actual_value": 0.42,
-    "variance_percentage": 17.68,
-    "risk_score": "High",
-    "root_cause_alert": "Gross profit above target — improved cost efficiencies or higher-margin product mix.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-22",
-    "primary_domain": "Agribusiness",
-    "subsidiary": "Johor Plantation Group",
-    "metric_name": "Daily_Gross_Profit_RM_Mil",
-    "target_value": 1.89,
-    "actual_value": 1.64,
-    "variance_percentage": -12.93,
-    "risk_score": "High",
-    "root_cause_alert": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-22",
-    "primary_domain": "Wellness and healthcare",
-    "subsidiary": "KPJ Johor Specialist Hospital",
-    "metric_name": "Daily_Gross_Profit_RM_Mil",
-    "target_value": 5.62,
-    "actual_value": 6.5,
-    "variance_percentage": 15.59,
-    "risk_score": "High",
-    "root_cause_alert": "Gross profit above target — improved cost efficiencies or higher-margin product mix.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-23",
-    "primary_domain": "Agribusiness",
-    "subsidiary": "Kulim (Malaysia) Berhad",
-    "metric_name": "Daily_Gross_Profit_RM_Mil",
-    "target_value": 1.99,
-    "actual_value": 1.7,
-    "variance_percentage": -14.58,
-    "risk_score": "High",
-    "root_cause_alert": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
-    "7_day_forecast": "94% probability of recurring failure",
-    "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-23",
-    "primary_domain": "Others",
-    "subsidiary": "Sindora Berhad",
-    "metric_name": "Daily_Revenue_RM_Mil",
-    "target_value": 0.73,
-    "actual_value": 0.84,
-    "variance_percentage": 14.64,
-    "risk_score": "High",
-    "root_cause_alert": "Revenue exceeded target — possible demand surge, new contract wins, or favourable commodity pricing.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-23",
-    "primary_domain": "Agribusiness",
-    "subsidiary": "Kulim (Malaysia) Berhad",
-    "metric_name": "Daily_Revenue_RM_Mil",
-    "target_value": 4.93,
-    "actual_value": 5.43,
-    "variance_percentage": 10.01,
-    "risk_score": "High",
-    "root_cause_alert": "Revenue exceeded target — possible demand surge, new contract wins, or favourable commodity pricing.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-24",
-    "primary_domain": "Others",
-    "subsidiary": "Johor Port Sdn Bhd",
-    "metric_name": "Daily_Gross_Profit_RM_Mil",
-    "target_value": 0.36,
-    "actual_value": 0.4,
-    "variance_percentage": 11.06,
-    "risk_score": "High",
-    "root_cause_alert": "Gross profit above target — improved cost efficiencies or higher-margin product mix.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-24",
-    "primary_domain": "Real estate and infrastructure",
-    "subsidiary": "JCIT",
-    "metric_name": "Daily_Finance_Cost_RM_Mil",
-    "target_value": 0.36,
-    "actual_value": 0.31,
-    "variance_percentage": -13.95,
-    "risk_score": "High",
-    "root_cause_alert": "Finance costs below target — early loan repayment or favourable refinancing.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Review loan utilisation report. Confirm all drawdowns are approved and evaluate refinancing options to reduce cost.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-25",
-    "primary_domain": "Real estate and infrastructure",
-    "subsidiary": "JCorp Properties Sdn Bhd",
-    "metric_name": "Daily_Gross_Profit_RM_Mil",
-    "target_value": 1.14,
-    "actual_value": 1.0,
-    "variance_percentage": -12.08,
-    "risk_score": "High",
-    "root_cause_alert": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
-    "7_day_forecast": "94% probability of recurring failure",
-    "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-26",
-    "primary_domain": "Others",
-    "subsidiary": "Sindora Berhad",
-    "metric_name": "Daily_Gross_Profit_RM_Mil",
-    "target_value": 0.36,
-    "actual_value": 0.4,
-    "variance_percentage": 10.73,
-    "risk_score": "High",
-    "root_cause_alert": "Gross profit above target — improved cost efficiencies or higher-margin product mix.",
-    "7_day_forecast": "94% probability of recurring failure",
-    "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-26",
-    "primary_domain": "Real estate and infrastructure",
-    "subsidiary": "Damansara Assets Sdn Bhd",
-    "metric_name": "Daily_Gross_Profit_RM_Mil",
-    "target_value": 1.07,
-    "actual_value": 0.76,
-    "variance_percentage": -28.82,
-    "risk_score": "High",
-    "root_cause_alert": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
-    "7_day_forecast": "94% probability of recurring failure",
-    "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-28",
-    "primary_domain": "Agribusiness",
-    "subsidiary": "Johor Plantation Group",
-    "metric_name": "Daily_Revenue_RM_Mil",
-    "target_value": 4.68,
-    "actual_value": 4.11,
-    "variance_percentage": -12.27,
-    "risk_score": "High",
-    "root_cause_alert": "Revenue fell below target — potential demand contraction, project delays, or commodity price headwinds.",
-    "7_day_forecast": "100% probability of recurring failure",
-    "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-28",
-    "primary_domain": "Wellness and healthcare",
-    "subsidiary": "KPJ Johor Specialist Hospital",
-    "metric_name": "Daily_Finance_Cost_RM_Mil",
-    "target_value": 0.51,
-    "actual_value": 0.58,
-    "variance_percentage": 14.55,
-    "risk_score": "High",
-    "root_cause_alert": "Finance costs spiked above target — likely unplanned loan drawdown, interest rate movement, or new lease obligations.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Review loan utilisation report. Confirm all drawdowns are approved and evaluate refinancing options to reduce cost.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-28",
-    "primary_domain": "Others",
-    "subsidiary": "QSR Brands (M) Holdings Bhd",
-    "metric_name": "Outlet_Transactions",
-    "target_value": 3005.0,
-    "actual_value": 2518.0,
-    "variance_percentage": -16.21,
-    "risk_score": "High",
-    "root_cause_alert": "Outlet transactions below target — consumer sentiment decline or supply interruption.",
-    "7_day_forecast": "100% probability of recurring failure",
-    "recommended_action": "Analyse transaction data by outlet cluster. Review stock availability and escalate to franchise operations team.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-28",
-    "primary_domain": "Real estate and infrastructure",
-    "subsidiary": "JCorp Properties Sdn Bhd",
-    "metric_name": "Daily_Finance_Cost_RM_Mil",
-    "target_value": 0.38,
-    "actual_value": 0.31,
-    "variance_percentage": -16.75,
-    "risk_score": "High",
-    "root_cause_alert": "Finance costs below target — early loan repayment or favourable refinancing.",
-    "7_day_forecast": "99% probability of recurring failure",
-    "recommended_action": "Review loan utilisation report. Confirm all drawdowns are approved and evaluate refinancing options to reduce cost.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
-  },
-  {
-    "date_detected": "2025-01-29",
-    "primary_domain": "Wellness and healthcare",
-    "subsidiary": "KPJ Healthcare Berhad",
-    "metric_name": "Daily_Gross_Profit_RM_Mil",
-    "target_value": 5.36,
-    "actual_value": 4.73,
-    "variance_percentage": -11.79,
-    "risk_score": "High",
-    "root_cause_alert": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
-    "7_day_forecast": "94% probability of recurring failure",
-    "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": false
-  },
-  {
-    "date_detected": "2025-01-30",
-    "primary_domain": "Others",
-    "subsidiary": "Johor Port Sdn Bhd",
-    "metric_name": "Daily_Revenue_RM_Mil",
-    "target_value": 0.71,
-    "actual_value": 0.79,
-    "variance_percentage": 11.49,
-    "risk_score": "High",
-    "root_cause_alert": "Revenue exceeded target — possible demand surge, new contract wins, or favourable commodity pricing.",
-    "7_day_forecast": "100% probability of recurring failure",
-    "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers.",
-    "correlated_domain": null,
-    "correlation_note": null,
-    "is_favourable": true
+{
+  "funnel_metrics": {
+    "total_signals": 480,
+    "suppressed": 401,
+    "retained": 79,
+    "escalated": 5
+  },
+  "categorized_incidents": {
+    "immediate_action": [
+      {
+        "incident_id": "REAL_20250112_44",
+        "incident_name": "Real Estate Finance Cost Incident",
+        "date_detected": "2025-01-12",
+        "primary_domain": "Real estate and infrastructure",
+        "subsidiaries": [
+          "JCIT"
+        ],
+        "risk_level": "Critical",
+        "impact_score": 91.7,
+        "is_all_favourable": false,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Finance_Cost_RM_Mil",
+            "display_name": "Daily Finance Cost (RM Mil)",
+            "target_value": 0.37,
+            "actual_value": 0.57,
+            "variance_pct": 55.01,
+            "risk_score": "Critical",
+            "is_favourable": false,
+            "root_cause": "Finance costs spiked above target — likely unplanned loan drawdown, interest rate movement, or new lease obligations.",
+            "recommended_action": "Alert Group Treasurer and Board Finance Committee. Review all active credit facilities, identify unplanned drawdowns, and assess interest rate exposure."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Daily Finance Cost (RM Mil) (avg 55.0% off target). Finance costs spiked above target — likely unplanned loan drawdown, interest rate movement, or new lease obligations.",
+        "primary_action": "Alert Group Treasurer and Board Finance Committee. Review all active credit facilities, identify unplanned drawdowns, and assess interest rate exposure.",
+        "forecast_pct": 80,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "REAL_20250108_40",
+        "incident_name": "Real Estate Development Incident",
+        "date_detected": "2025-01-08",
+        "primary_domain": "Real estate and infrastructure",
+        "subsidiaries": [
+          "Damansara Assets Sdn Bhd"
+        ],
+        "risk_level": "Critical",
+        "impact_score": 76.0,
+        "is_all_favourable": false,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Revenue_RM_Mil",
+            "display_name": "Daily Revenue (RM Mil)",
+            "target_value": 3.78,
+            "actual_value": 2.34,
+            "variance_pct": -38.0,
+            "risk_score": "Critical",
+            "is_favourable": false,
+            "root_cause": "Revenue fell below target — potential demand contraction, project delays, or commodity price headwinds.",
+            "recommended_action": "Escalate to Group CFO and segment CEO immediately. Initiate emergency revenue audit, review top-5 contracts, and assess impact on Group annual guidance."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Daily Revenue (RM Mil) (avg 38.0% off target). Revenue fell below target — potential demand contraction, project delays, or commodity price headwinds. Cross-domain signal: Real estate & infrastructure anomaly detected within ±1 day — property revenue shortfall may signal cashflow pressure upstream to Agribusiness supply chain and shared financing facilities.",
+        "primary_action": "Escalate to Group CFO and segment CEO immediately. Initiate emergency revenue audit, review top-5 contracts, and assess impact on Group annual guidance.",
+        "forecast_pct": 80,
+        "correlated_domain": "Agribusiness",
+        "correlation_note": "Real estate & infrastructure anomaly detected within ±1 day — property revenue shortfall may signal cashflow pressure upstream to Agribusiness supply chain and shared financing facilities."
+      },
+      {
+        "incident_id": "WELL_20250118_59",
+        "incident_name": "Healthcare Operations Incident",
+        "date_detected": "2025-01-18",
+        "primary_domain": "Wellness and healthcare",
+        "subsidiaries": [
+          "KPJ Johor Specialist Hospital"
+        ],
+        "risk_level": "Critical",
+        "impact_score": 68.0,
+        "is_all_favourable": false,
+        "metric_count": 2,
+        "metrics": [
+          {
+            "metric_name": "Patient_Admissions",
+            "display_name": "Patient Admissions",
+            "target_value": 1215.0,
+            "actual_value": 753.3,
+            "variance_pct": -38.0,
+            "risk_score": "Critical",
+            "is_favourable": false,
+            "root_cause": "Patient admissions collapsed below target — IT/booking system outage, competitor pressure, or service disruption.",
+            "recommended_action": "Escalate to KPJ Healthcare CEO. Investigate booking system and IT infrastructure. Activate patient diversion protocol and notify Ministry of Health if required."
+          },
+          {
+            "metric_name": "Daily_Revenue_RM_Mil",
+            "display_name": "Daily Revenue (RM Mil)",
+            "target_value": 11.29,
+            "actual_value": 7.9,
+            "variance_pct": -30.0,
+            "risk_score": "Critical",
+            "is_favourable": false,
+            "root_cause": "Revenue fell below target — potential demand contraction, project delays, or commodity price headwinds.",
+            "recommended_action": "Escalate to Group CFO and segment CEO immediately. Initiate emergency revenue audit, review top-5 contracts, and assess impact on Group annual guidance."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Patient Admissions, Daily Revenue (RM Mil) (avg 34.0% off target). Patient admissions collapsed below target — IT/booking system outage, competitor pressure, or service disruption. Cross-domain signal: KPJ Healthcare anomaly detected within ±1 day — patient admission / revenue drop may indicate systemic consumer confidence issue also affecting QSR outlet transactions.",
+        "primary_action": "Escalate to KPJ Healthcare CEO. Investigate booking system and IT infrastructure. Activate patient diversion protocol and notify Ministry of Health if required.",
+        "forecast_pct": 85,
+        "correlated_domain": "Others",
+        "correlation_note": "KPJ Healthcare anomaly detected within ±1 day — patient admission / revenue drop may indicate systemic consumer confidence issue also affecting QSR outlet transactions."
+      },
+      {
+        "incident_id": "AGRI_20250126_14",
+        "incident_name": "Plantation Yield & Revenue Incident",
+        "date_detected": "2025-01-26",
+        "primary_domain": "Agribusiness",
+        "subsidiaries": [
+          "Johor Plantation Group"
+        ],
+        "risk_level": "Critical",
+        "impact_score": 65.8,
+        "is_all_favourable": false,
+        "metric_count": 2,
+        "metrics": [
+          {
+            "metric_name": "FFB_Processed_Tonnes",
+            "display_name": "FFB Processed (Tonnes)",
+            "target_value": 4457.0,
+            "actual_value": 2495.92,
+            "variance_pct": -44.0,
+            "risk_score": "Critical",
+            "is_favourable": false,
+            "root_cause": "FFB processed tonnes fell below target — machinery breakdown, flooding, or pest outbreak in plantation.",
+            "recommended_action": "Deploy emergency maintenance team to affected mills. Notify Group Operations Director and activate business continuity plan. Assess crop loss impact."
+          },
+          {
+            "metric_name": "Daily_Gross_Profit_RM_Mil",
+            "display_name": "Daily Gross Profit (RM Mil)",
+            "target_value": 2.04,
+            "actual_value": 1.33,
+            "variance_pct": -35.0,
+            "risk_score": "Critical",
+            "is_favourable": false,
+            "root_cause": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
+            "recommended_action": "Convene emergency cost-review committee. Engage procurement on input cost hedging and review pricing strategy with commercial team."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across FFB Processed (Tonnes), Daily Gross Profit (RM Mil) (avg 39.5% off target). FFB processed tonnes fell below target — machinery breakdown, flooding, or pest outbreak in plantation.",
+        "primary_action": "Deploy emergency maintenance team to affected mills. Notify Group Operations Director and activate business continuity plan. Assess crop loss impact.",
+        "forecast_pct": 85,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "OTHE_20250122_31",
+        "incident_name": "Others Finance Cost Incident",
+        "date_detected": "2025-01-22",
+        "primary_domain": "Others",
+        "subsidiaries": [
+          "QSR Brands (M) Holdings Bhd"
+        ],
+        "risk_level": "Critical",
+        "impact_score": 58.4,
+        "is_all_favourable": false,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Finance_Cost_RM_Mil",
+            "display_name": "Daily Finance Cost (RM Mil)",
+            "target_value": 0.48,
+            "actual_value": 0.65,
+            "variance_pct": 35.01,
+            "risk_score": "Critical",
+            "is_favourable": false,
+            "root_cause": "Finance costs spiked above target — likely unplanned loan drawdown, interest rate movement, or new lease obligations.",
+            "recommended_action": "Alert Group Treasurer and Board Finance Committee. Review all active credit facilities, identify unplanned drawdowns, and assess interest rate exposure."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Daily Finance Cost (RM Mil) (avg 35.0% off target). Finance costs spiked above target — likely unplanned loan drawdown, interest rate movement, or new lease obligations.",
+        "primary_action": "Alert Group Treasurer and Board Finance Committee. Review all active credit facilities, identify unplanned drawdowns, and assess interest rate exposure.",
+        "forecast_pct": 80,
+        "correlated_domain": null,
+        "correlation_note": null
+      }
+    ],
+    "emerging_risk": [
+      {
+        "incident_id": "AGRI_20250108_03",
+        "incident_name": "Plantation Yield & Revenue Incident",
+        "date_detected": "2025-01-08",
+        "primary_domain": "Agribusiness",
+        "subsidiaries": [
+          "Johor Plantation Group"
+        ],
+        "risk_level": "Critical",
+        "impact_score": 47.2,
+        "is_all_favourable": false,
+        "metric_count": 2,
+        "metrics": [
+          {
+            "metric_name": "Daily_Revenue_RM_Mil",
+            "display_name": "Daily Revenue (RM Mil)",
+            "target_value": 4.67,
+            "actual_value": 2.71,
+            "variance_pct": -42.0,
+            "risk_score": "Critical",
+            "is_favourable": false,
+            "root_cause": "Revenue fell below target — potential demand contraction, project delays, or commodity price headwinds.",
+            "recommended_action": "Escalate to Group CFO and segment CEO immediately. Initiate emergency revenue audit, review top-5 contracts, and assess impact on Group annual guidance."
+          },
+          {
+            "metric_name": "Daily_Gross_Profit_RM_Mil",
+            "display_name": "Daily Gross Profit (RM Mil)",
+            "target_value": 1.96,
+            "actual_value": 1.76,
+            "variance_pct": -10.5,
+            "risk_score": "High",
+            "is_favourable": false,
+            "root_cause": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
+            "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Daily Revenue (RM Mil), Daily Gross Profit (RM Mil) (avg 26.2% off target). Revenue fell below target — potential demand contraction, project delays, or commodity price headwinds. Cross-domain signal: Agribusiness operational disruption detected within ±1 day — plantation output shortfall is likely constraining land-bank revenue and project cash flows in Real Estate & Infrastructure.",
+        "primary_action": "Escalate to Group CFO and segment CEO immediately. Initiate emergency revenue audit, review top-5 contracts, and assess impact on Group annual guidance.",
+        "forecast_pct": 85,
+        "correlated_domain": "Real estate and infrastructure",
+        "correlation_note": "Agribusiness operational disruption detected within ±1 day — plantation output shortfall is likely constraining land-bank revenue and project cash flows in Real Estate & Infrastructure."
+      },
+      {
+        "incident_id": "OTHE_20250118_25",
+        "incident_name": "QSR & Consumer Business Incident",
+        "date_detected": "2025-01-18",
+        "primary_domain": "Others",
+        "subsidiaries": [
+          "Johor Port Sdn Bhd"
+        ],
+        "risk_level": "Critical",
+        "impact_score": 40.4,
+        "is_all_favourable": false,
+        "metric_count": 2,
+        "metrics": [
+          {
+            "metric_name": "Outlet_Transactions",
+            "display_name": "Outlet Transactions",
+            "target_value": 3195.0,
+            "actual_value": 1980.9,
+            "variance_pct": -38.0,
+            "risk_score": "Critical",
+            "is_favourable": false,
+            "root_cause": "Outlet transactions below target — consumer sentiment decline or supply interruption.",
+            "recommended_action": "Escalate to QSR Brands CEO. Review outlet-level POS data, identify affected locations, and launch targeted promotional response."
+          },
+          {
+            "metric_name": "Daily_Revenue_RM_Mil",
+            "display_name": "Daily Revenue (RM Mil)",
+            "target_value": 0.7,
+            "actual_value": 0.79,
+            "variance_pct": 12.2,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Revenue exceeded target — possible demand surge, new contract wins, or favourable commodity pricing.",
+            "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Outlet Transactions (avg 38.0% off target). Outlet transactions below target — consumer sentiment decline or supply interruption. Positive signal in Daily Revenue (RM Mil) — may indicate efficiency gains or demand surge. Cross-domain signal: Others (QSR/Outlets) anomaly detected within ±1 day — consumer-facing disruption may cascade to Wellness & Healthcare demand signals given shared demographic exposure.",
+        "primary_action": "Escalate to QSR Brands CEO. Review outlet-level POS data, identify affected locations, and launch targeted promotional response.",
+        "forecast_pct": 80,
+        "correlated_domain": "Wellness and healthcare",
+        "correlation_note": "Others (QSR/Outlets) anomaly detected within ±1 day — consumer-facing disruption may cascade to Wellness & Healthcare demand signals given shared demographic exposure."
+      },
+      {
+        "incident_id": "REAL_20250126_55",
+        "incident_name": "Real Estate Development Incident",
+        "date_detected": "2025-01-26",
+        "primary_domain": "Real estate and infrastructure",
+        "subsidiaries": [
+          "Damansara Assets Sdn Bhd"
+        ],
+        "risk_level": "High",
+        "impact_score": 24.0,
+        "is_all_favourable": false,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Gross_Profit_RM_Mil",
+            "display_name": "Daily Gross Profit (RM Mil)",
+            "target_value": 1.07,
+            "actual_value": 0.76,
+            "variance_pct": -28.82,
+            "risk_score": "High",
+            "is_favourable": false,
+            "root_cause": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
+            "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Daily Gross Profit (RM Mil) (avg 28.8% off target). Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
+        "primary_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
+        "forecast_pct": 50,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "REAL_20250103_38",
+        "incident_name": "Real Estate Development Incident",
+        "date_detected": "2025-01-03",
+        "primary_domain": "Real estate and infrastructure",
+        "subsidiaries": [
+          "JCIT"
+        ],
+        "risk_level": "High",
+        "impact_score": 17.6,
+        "is_all_favourable": false,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Gross_Profit_RM_Mil",
+            "display_name": "Daily Gross Profit (RM Mil)",
+            "target_value": 1.15,
+            "actual_value": 0.91,
+            "variance_pct": -21.1,
+            "risk_score": "High",
+            "is_favourable": false,
+            "root_cause": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
+            "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Daily Gross Profit (RM Mil) (avg 21.1% off target). Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
+        "primary_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
+        "forecast_pct": 50,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "AGRI_20250113_06",
+        "incident_name": "Plantation Yield & Revenue Incident",
+        "date_detected": "2025-01-13",
+        "primary_domain": "Agribusiness",
+        "subsidiaries": [
+          "Kulim (Malaysia) Berhad"
+        ],
+        "risk_level": "High",
+        "impact_score": 16.0,
+        "is_all_favourable": false,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Gross_Profit_RM_Mil",
+            "display_name": "Daily Gross Profit (RM Mil)",
+            "target_value": 1.93,
+            "actual_value": 1.56,
+            "variance_pct": -19.19,
+            "risk_score": "High",
+            "is_favourable": false,
+            "root_cause": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
+            "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Daily Gross Profit (RM Mil) (avg 19.2% off target). Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
+        "primary_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
+        "forecast_pct": 50,
+        "correlated_domain": null,
+        "correlation_note": null
+      }
+    ],
+    "monitor": [
+      {
+        "incident_id": "OTHE_20250128_35",
+        "incident_name": "QSR & Consumer Business Incident",
+        "date_detected": "2025-01-28",
+        "primary_domain": "Others",
+        "subsidiaries": [
+          "QSR Brands (M) Holdings Bhd"
+        ],
+        "risk_level": "High",
+        "impact_score": 13.5,
+        "is_all_favourable": false,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Outlet_Transactions",
+            "display_name": "Outlet Transactions",
+            "target_value": 3005.0,
+            "actual_value": 2518.0,
+            "variance_pct": -16.21,
+            "risk_score": "High",
+            "is_favourable": false,
+            "root_cause": "Outlet transactions below target — consumer sentiment decline or supply interruption.",
+            "recommended_action": "Analyse transaction data by outlet cluster. Review stock availability and escalate to franchise operations team."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Outlet Transactions (avg 16.2% off target). Outlet transactions below target — consumer sentiment decline or supply interruption.",
+        "primary_action": "Analyse transaction data by outlet cluster. Review stock availability and escalate to franchise operations team.",
+        "forecast_pct": 50,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "OTHE_20250109_19",
+        "incident_name": "Others Finance Cost Incident",
+        "date_detected": "2025-01-09",
+        "primary_domain": "Others",
+        "subsidiaries": [
+          "Johor Port Sdn Bhd"
+        ],
+        "risk_level": "High",
+        "impact_score": 12.9,
+        "is_all_favourable": false,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Finance_Cost_RM_Mil",
+            "display_name": "Daily Finance Cost (RM Mil)",
+            "target_value": 0.46,
+            "actual_value": 0.54,
+            "variance_pct": 15.48,
+            "risk_score": "High",
+            "is_favourable": false,
+            "root_cause": "Finance costs spiked above target — likely unplanned loan drawdown, interest rate movement, or new lease obligations.",
+            "recommended_action": "Review loan utilisation report. Confirm all drawdowns are approved and evaluate refinancing options to reduce cost."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Daily Finance Cost (RM Mil) (avg 15.5% off target). Finance costs spiked above target — likely unplanned loan drawdown, interest rate movement, or new lease obligations.",
+        "primary_action": "Review loan utilisation report. Confirm all drawdowns are approved and evaluate refinancing options to reduce cost.",
+        "forecast_pct": 50,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "AGRI_20250111_05",
+        "incident_name": "Plantation Yield & Revenue Incident",
+        "date_detected": "2025-01-11",
+        "primary_domain": "Agribusiness",
+        "subsidiaries": [
+          "Kulim (Malaysia) Berhad"
+        ],
+        "risk_level": "High",
+        "impact_score": 12.5,
+        "is_all_favourable": false,
+        "metric_count": 2,
+        "metrics": [
+          {
+            "metric_name": "Daily_Revenue_RM_Mil",
+            "display_name": "Daily Revenue (RM Mil)",
+            "target_value": 4.63,
+            "actual_value": 4.16,
+            "variance_pct": -10.04,
+            "risk_score": "High",
+            "is_favourable": false,
+            "root_cause": "Revenue fell below target — potential demand contraction, project delays, or commodity price headwinds.",
+            "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers."
+          },
+          {
+            "metric_name": "Daily_Gross_Profit_RM_Mil",
+            "display_name": "Daily Gross Profit (RM Mil)",
+            "target_value": 1.93,
+            "actual_value": 1.55,
+            "variance_pct": -19.91,
+            "risk_score": "High",
+            "is_favourable": false,
+            "root_cause": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
+            "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Daily Revenue (RM Mil), Daily Gross Profit (RM Mil) (avg 15.0% off target). Revenue fell below target — potential demand contraction, project delays, or commodity price headwinds.",
+        "primary_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
+        "forecast_pct": 55,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "REAL_20250116_46",
+        "incident_name": "Real Estate Development Incident",
+        "date_detected": "2025-01-16",
+        "primary_domain": "Real estate and infrastructure",
+        "subsidiaries": [
+          "JCorp Properties Sdn Bhd"
+        ],
+        "risk_level": "High",
+        "impact_score": 12.1,
+        "is_all_favourable": false,
+        "metric_count": 2,
+        "metrics": [
+          {
+            "metric_name": "Daily_Revenue_RM_Mil",
+            "display_name": "Daily Revenue (RM Mil)",
+            "target_value": 3.82,
+            "actual_value": 4.34,
+            "variance_pct": 13.62,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Revenue exceeded target — possible demand surge, new contract wins, or favourable commodity pricing.",
+            "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers."
+          },
+          {
+            "metric_name": "Daily_Gross_Profit_RM_Mil",
+            "display_name": "Daily Gross Profit (RM Mil)",
+            "target_value": 1.1,
+            "actual_value": 0.84,
+            "variance_pct": -23.56,
+            "risk_score": "High",
+            "is_favourable": false,
+            "root_cause": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
+            "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Daily Gross Profit (RM Mil) (avg 23.6% off target). Gross profit below target — input cost escalation, margin compression, or unfavourable product mix. Positive signal in Daily Revenue (RM Mil) — may indicate efficiency gains or demand surge.",
+        "primary_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
+        "forecast_pct": 50,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "WELL_20250128_61",
+        "incident_name": "Healthcare Finance Cost Incident",
+        "date_detected": "2025-01-28",
+        "primary_domain": "Wellness and healthcare",
+        "subsidiaries": [
+          "KPJ Johor Specialist Hospital"
+        ],
+        "risk_level": "High",
+        "impact_score": 12.1,
+        "is_all_favourable": false,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Finance_Cost_RM_Mil",
+            "display_name": "Daily Finance Cost (RM Mil)",
+            "target_value": 0.51,
+            "actual_value": 0.58,
+            "variance_pct": 14.55,
+            "risk_score": "High",
+            "is_favourable": false,
+            "root_cause": "Finance costs spiked above target — likely unplanned loan drawdown, interest rate movement, or new lease obligations.",
+            "recommended_action": "Review loan utilisation report. Confirm all drawdowns are approved and evaluate refinancing options to reduce cost."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Daily Finance Cost (RM Mil) (avg 14.6% off target). Finance costs spiked above target — likely unplanned loan drawdown, interest rate movement, or new lease obligations.",
+        "primary_action": "Review loan utilisation report. Confirm all drawdowns are approved and evaluate refinancing options to reduce cost.",
+        "forecast_pct": 50,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "REAL_20250106_39",
+        "incident_name": "Real Estate Development Incident",
+        "date_detected": "2025-01-06",
+        "primary_domain": "Real estate and infrastructure",
+        "subsidiaries": [
+          "JCIT"
+        ],
+        "risk_level": "High",
+        "impact_score": 12.0,
+        "is_all_favourable": false,
+        "metric_count": 2,
+        "metrics": [
+          {
+            "metric_name": "Daily_Revenue_RM_Mil",
+            "display_name": "Daily Revenue (RM Mil)",
+            "target_value": 3.82,
+            "actual_value": 3.17,
+            "variance_pct": -17.02,
+            "risk_score": "High",
+            "is_favourable": false,
+            "root_cause": "Revenue fell below target — potential demand contraction, project delays, or commodity price headwinds.",
+            "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers."
+          },
+          {
+            "metric_name": "Daily_Gross_Profit_RM_Mil",
+            "display_name": "Daily Gross Profit (RM Mil)",
+            "target_value": 1.11,
+            "actual_value": 1.44,
+            "variance_pct": 29.3,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Gross profit above target — improved cost efficiencies or higher-margin product mix.",
+            "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Daily Revenue (RM Mil) (avg 17.0% off target). Revenue fell below target — potential demand contraction, project delays, or commodity price headwinds. Positive signal in Daily Gross Profit (RM Mil) — may indicate efficiency gains or demand surge.",
+        "primary_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
+        "forecast_pct": 50,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "REAL_20250117_47",
+        "incident_name": "Real Estate Finance Cost Incident",
+        "date_detected": "2025-01-17",
+        "primary_domain": "Real estate and infrastructure",
+        "subsidiaries": [
+          "Damansara Assets Sdn Bhd"
+        ],
+        "risk_level": "High",
+        "impact_score": 11.9,
+        "is_all_favourable": false,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Finance_Cost_RM_Mil",
+            "display_name": "Daily Finance Cost (RM Mil)",
+            "target_value": 0.36,
+            "actual_value": 0.41,
+            "variance_pct": 14.23,
+            "risk_score": "High",
+            "is_favourable": false,
+            "root_cause": "Finance costs spiked above target — likely unplanned loan drawdown, interest rate movement, or new lease obligations.",
+            "recommended_action": "Review loan utilisation report. Confirm all drawdowns are approved and evaluate refinancing options to reduce cost."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Daily Finance Cost (RM Mil) (avg 14.2% off target). Finance costs spiked above target — likely unplanned loan drawdown, interest rate movement, or new lease obligations.",
+        "primary_action": "Review loan utilisation report. Confirm all drawdowns are approved and evaluate refinancing options to reduce cost.",
+        "forecast_pct": 50,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "OTHE_20250119_27",
+        "incident_name": "QSR & Consumer Business Incident",
+        "date_detected": "2025-01-19",
+        "primary_domain": "Others",
+        "subsidiaries": [
+          "QSR Brands (M) Holdings Bhd"
+        ],
+        "risk_level": "High",
+        "impact_score": 11.8,
+        "is_all_favourable": false,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Outlet_Transactions",
+            "display_name": "Outlet Transactions",
+            "target_value": 3070.0,
+            "actual_value": 2637.0,
+            "variance_pct": -14.1,
+            "risk_score": "High",
+            "is_favourable": false,
+            "root_cause": "Outlet transactions below target — consumer sentiment decline or supply interruption.",
+            "recommended_action": "Analyse transaction data by outlet cluster. Review stock availability and escalate to franchise operations team."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Outlet Transactions (avg 14.1% off target). Outlet transactions below target — consumer sentiment decline or supply interruption.",
+        "primary_action": "Analyse transaction data by outlet cluster. Review stock availability and escalate to franchise operations team.",
+        "forecast_pct": 50,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "REAL_20250118_49",
+        "incident_name": "Real Estate Finance Cost Incident",
+        "date_detected": "2025-01-18",
+        "primary_domain": "Real estate and infrastructure",
+        "subsidiaries": [
+          "JCIT"
+        ],
+        "risk_level": "High",
+        "impact_score": 11.7,
+        "is_all_favourable": false,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Finance_Cost_RM_Mil",
+            "display_name": "Daily Finance Cost (RM Mil)",
+            "target_value": 0.38,
+            "actual_value": 0.43,
+            "variance_pct": 13.99,
+            "risk_score": "High",
+            "is_favourable": false,
+            "root_cause": "Finance costs spiked above target — likely unplanned loan drawdown, interest rate movement, or new lease obligations.",
+            "recommended_action": "Review loan utilisation report. Confirm all drawdowns are approved and evaluate refinancing options to reduce cost."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Daily Finance Cost (RM Mil) (avg 14.0% off target). Finance costs spiked above target — likely unplanned loan drawdown, interest rate movement, or new lease obligations.",
+        "primary_action": "Review loan utilisation report. Confirm all drawdowns are approved and evaluate refinancing options to reduce cost.",
+        "forecast_pct": 50,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "OTHE_20250117_24",
+        "incident_name": "QSR & Consumer Business Incident",
+        "date_detected": "2025-01-17",
+        "primary_domain": "Others",
+        "subsidiaries": [
+          "Sindora Berhad"
+        ],
+        "risk_level": "High",
+        "impact_score": 11.6,
+        "is_all_favourable": false,
+        "metric_count": 2,
+        "metrics": [
+          {
+            "metric_name": "Outlet_Transactions",
+            "display_name": "Outlet Transactions",
+            "target_value": 3180.0,
+            "actual_value": 2705.0,
+            "variance_pct": -14.94,
+            "risk_score": "High",
+            "is_favourable": false,
+            "root_cause": "Outlet transactions below target — consumer sentiment decline or supply interruption.",
+            "recommended_action": "Analyse transaction data by outlet cluster. Review stock availability and escalate to franchise operations team."
+          },
+          {
+            "metric_name": "Daily_Revenue_RM_Mil",
+            "display_name": "Daily Revenue (RM Mil)",
+            "target_value": 0.71,
+            "actual_value": 0.62,
+            "variance_pct": -12.85,
+            "risk_score": "High",
+            "is_favourable": false,
+            "root_cause": "Revenue fell below target — potential demand contraction, project delays, or commodity price headwinds.",
+            "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Outlet Transactions, Daily Revenue (RM Mil) (avg 13.9% off target). Outlet transactions below target — consumer sentiment decline or supply interruption.",
+        "primary_action": "Analyse transaction data by outlet cluster. Review stock availability and escalate to franchise operations team.",
+        "forecast_pct": 55,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "OTHE_20250111_21",
+        "incident_name": "QSR & Consumer Business Incident",
+        "date_detected": "2025-01-11",
+        "primary_domain": "Others",
+        "subsidiaries": [
+          "Sindora Berhad"
+        ],
+        "risk_level": "High",
+        "impact_score": 11.1,
+        "is_all_favourable": false,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Gross_Profit_RM_Mil",
+            "display_name": "Daily Gross Profit (RM Mil)",
+            "target_value": 0.35,
+            "actual_value": 0.31,
+            "variance_pct": -13.34,
+            "risk_score": "High",
+            "is_favourable": false,
+            "root_cause": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
+            "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Daily Gross Profit (RM Mil) (avg 13.3% off target). Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
+        "primary_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
+        "forecast_pct": 50,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "AGRI_20250122_12",
+        "incident_name": "Plantation Yield & Revenue Incident",
+        "date_detected": "2025-01-22",
+        "primary_domain": "Agribusiness",
+        "subsidiaries": [
+          "Johor Plantation Group"
+        ],
+        "risk_level": "High",
+        "impact_score": 10.8,
+        "is_all_favourable": false,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Gross_Profit_RM_Mil",
+            "display_name": "Daily Gross Profit (RM Mil)",
+            "target_value": 1.89,
+            "actual_value": 1.64,
+            "variance_pct": -12.93,
+            "risk_score": "High",
+            "is_favourable": false,
+            "root_cause": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
+            "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Daily Gross Profit (RM Mil) (avg 12.9% off target). Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
+        "primary_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
+        "forecast_pct": 50,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "AGRI_20250101_00",
+        "incident_name": "Agribusiness Finance Cost Incident",
+        "date_detected": "2025-01-01",
+        "primary_domain": "Agribusiness",
+        "subsidiaries": [
+          "Kulim (Malaysia) Berhad"
+        ],
+        "risk_level": "High",
+        "impact_score": 10.7,
+        "is_all_favourable": false,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Finance_Cost_RM_Mil",
+            "display_name": "Daily Finance Cost (RM Mil)",
+            "target_value": 0.16,
+            "actual_value": 0.19,
+            "variance_pct": 12.86,
+            "risk_score": "High",
+            "is_favourable": false,
+            "root_cause": "Finance costs spiked above target — likely unplanned loan drawdown, interest rate movement, or new lease obligations.",
+            "recommended_action": "Review loan utilisation report. Confirm all drawdowns are approved and evaluate refinancing options to reduce cost."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Daily Finance Cost (RM Mil) (avg 12.9% off target). Finance costs spiked above target — likely unplanned loan drawdown, interest rate movement, or new lease obligations.",
+        "primary_action": "Review loan utilisation report. Confirm all drawdowns are approved and evaluate refinancing options to reduce cost.",
+        "forecast_pct": 50,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "AGRI_20250102_01",
+        "incident_name": "Plantation Yield & Revenue Incident",
+        "date_detected": "2025-01-02",
+        "primary_domain": "Agribusiness",
+        "subsidiaries": [
+          "Johor Plantation Group"
+        ],
+        "risk_level": "High",
+        "impact_score": 10.4,
+        "is_all_favourable": false,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "FFB_Processed_Tonnes",
+            "display_name": "FFB Processed (Tonnes)",
+            "target_value": 4521.0,
+            "actual_value": 3955.0,
+            "variance_pct": -12.52,
+            "risk_score": "High",
+            "is_favourable": false,
+            "root_cause": "FFB processed tonnes fell below target — machinery breakdown, flooding, or pest outbreak in plantation.",
+            "recommended_action": "Increase mill monitoring frequency. Review equipment service logs and assess estate-level yield data for harvest disruptions."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across FFB Processed (Tonnes) (avg 12.5% off target). FFB processed tonnes fell below target — machinery breakdown, flooding, or pest outbreak in plantation.",
+        "primary_action": "Increase mill monitoring frequency. Review equipment service logs and assess estate-level yield data for harvest disruptions.",
+        "forecast_pct": 50,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "AGRI_20250107_02",
+        "incident_name": "Plantation Yield & Revenue Incident",
+        "date_detected": "2025-01-07",
+        "primary_domain": "Agribusiness",
+        "subsidiaries": [
+          "Kulim (Malaysia) Berhad"
+        ],
+        "risk_level": "High",
+        "impact_score": 10.4,
+        "is_all_favourable": false,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Gross_Profit_RM_Mil",
+            "display_name": "Daily Gross Profit (RM Mil)",
+            "target_value": 1.93,
+            "actual_value": 1.69,
+            "variance_pct": -12.54,
+            "risk_score": "High",
+            "is_favourable": false,
+            "root_cause": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
+            "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Daily Gross Profit (RM Mil) (avg 12.5% off target). Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
+        "primary_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
+        "forecast_pct": 50,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "AGRI_20250128_15",
+        "incident_name": "Plantation Yield & Revenue Incident",
+        "date_detected": "2025-01-28",
+        "primary_domain": "Agribusiness",
+        "subsidiaries": [
+          "Johor Plantation Group"
+        ],
+        "risk_level": "High",
+        "impact_score": 10.2,
+        "is_all_favourable": false,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Revenue_RM_Mil",
+            "display_name": "Daily Revenue (RM Mil)",
+            "target_value": 4.68,
+            "actual_value": 4.11,
+            "variance_pct": -12.27,
+            "risk_score": "High",
+            "is_favourable": false,
+            "root_cause": "Revenue fell below target — potential demand contraction, project delays, or commodity price headwinds.",
+            "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Daily Revenue (RM Mil) (avg 12.3% off target). Revenue fell below target — potential demand contraction, project delays, or commodity price headwinds.",
+        "primary_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers.",
+        "forecast_pct": 50,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "REAL_20250125_54",
+        "incident_name": "Real Estate Development Incident",
+        "date_detected": "2025-01-25",
+        "primary_domain": "Real estate and infrastructure",
+        "subsidiaries": [
+          "JCorp Properties Sdn Bhd"
+        ],
+        "risk_level": "High",
+        "impact_score": 10.1,
+        "is_all_favourable": false,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Gross_Profit_RM_Mil",
+            "display_name": "Daily Gross Profit (RM Mil)",
+            "target_value": 1.14,
+            "actual_value": 1.0,
+            "variance_pct": -12.08,
+            "risk_score": "High",
+            "is_favourable": false,
+            "root_cause": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
+            "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Daily Gross Profit (RM Mil) (avg 12.1% off target). Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
+        "primary_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
+        "forecast_pct": 50,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "REAL_20250110_42",
+        "incident_name": "Real Estate Development Incident",
+        "date_detected": "2025-01-10",
+        "primary_domain": "Real estate and infrastructure",
+        "subsidiaries": [
+          "JCorp Properties Sdn Bhd"
+        ],
+        "risk_level": "High",
+        "impact_score": 10.0,
+        "is_all_favourable": false,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Units_Under_Construction",
+            "display_name": "Units Under Construction",
+            "target_value": 83.0,
+            "actual_value": 73.0,
+            "variance_pct": -12.05,
+            "risk_score": "High",
+            "is_favourable": false,
+            "root_cause": "Construction units below target — regulatory delays, contractor issues, or material shortages.",
+            "recommended_action": "Conduct site progress review. Identify bottlenecks in materials procurement and sub-contractor performance."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Units Under Construction (avg 12.1% off target). Construction units below target — regulatory delays, contractor issues, or material shortages.",
+        "primary_action": "Conduct site progress review. Identify bottlenecks in materials procurement and sub-contractor performance.",
+        "forecast_pct": 50,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "WELL_20250129_62",
+        "incident_name": "Healthcare Operations Incident",
+        "date_detected": "2025-01-29",
+        "primary_domain": "Wellness and healthcare",
+        "subsidiaries": [
+          "KPJ Healthcare Berhad"
+        ],
+        "risk_level": "High",
+        "impact_score": 9.8,
+        "is_all_favourable": false,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Gross_Profit_RM_Mil",
+            "display_name": "Daily Gross Profit (RM Mil)",
+            "target_value": 5.36,
+            "actual_value": 4.73,
+            "variance_pct": -11.79,
+            "risk_score": "High",
+            "is_favourable": false,
+            "root_cause": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
+            "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Daily Gross Profit (RM Mil) (avg 11.8% off target). Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
+        "primary_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
+        "forecast_pct": 50,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "REAL_20250109_41",
+        "incident_name": "Real Estate Development Incident",
+        "date_detected": "2025-01-09",
+        "primary_domain": "Real estate and infrastructure",
+        "subsidiaries": [
+          "JCIT"
+        ],
+        "risk_level": "High",
+        "impact_score": 9.6,
+        "is_all_favourable": false,
+        "metric_count": 2,
+        "metrics": [
+          {
+            "metric_name": "Daily_Revenue_RM_Mil",
+            "display_name": "Daily Revenue (RM Mil)",
+            "target_value": 3.65,
+            "actual_value": 3.24,
+            "variance_pct": -11.2,
+            "risk_score": "High",
+            "is_favourable": false,
+            "root_cause": "Revenue fell below target — potential demand contraction, project delays, or commodity price headwinds.",
+            "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers."
+          },
+          {
+            "metric_name": "Daily_Gross_Profit_RM_Mil",
+            "display_name": "Daily Gross Profit (RM Mil)",
+            "target_value": 1.1,
+            "actual_value": 0.97,
+            "variance_pct": -11.95,
+            "risk_score": "High",
+            "is_favourable": false,
+            "root_cause": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
+            "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Daily Revenue (RM Mil), Daily Gross Profit (RM Mil) (avg 11.6% off target). Revenue fell below target — potential demand contraction, project delays, or commodity price headwinds.",
+        "primary_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
+        "forecast_pct": 55,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "WELL_20250109_58",
+        "incident_name": "Healthcare Operations Incident",
+        "date_detected": "2025-01-09",
+        "primary_domain": "Wellness and healthcare",
+        "subsidiaries": [
+          "KPJ Healthcare Berhad"
+        ],
+        "risk_level": "High",
+        "impact_score": 8.9,
+        "is_all_favourable": false,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Patient_Admissions",
+            "display_name": "Patient Admissions",
+            "target_value": 1176.0,
+            "actual_value": 1050.0,
+            "variance_pct": -10.71,
+            "risk_score": "High",
+            "is_favourable": false,
+            "root_cause": "Patient admissions collapsed below target — IT/booking system outage, competitor pressure, or service disruption.",
+            "recommended_action": "Review admissions data by hospital unit. Identify specific wards/services affected and engage clinical operations team."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Patient Admissions (avg 10.7% off target). Patient admissions collapsed below target — IT/booking system outage, competitor pressure, or service disruption.",
+        "primary_action": "Review admissions data by hospital unit. Identify specific wards/services affected and engage clinical operations team.",
+        "forecast_pct": 50,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "AGRI_20250113_07",
+        "incident_name": "Agribusiness Finance Cost Incident",
+        "date_detected": "2025-01-13",
+        "primary_domain": "Agribusiness",
+        "subsidiaries": [
+          "Kulim (Malaysia) Berhad"
+        ],
+        "risk_level": "High",
+        "impact_score": 8.6,
+        "is_all_favourable": false,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Finance_Cost_RM_Mil",
+            "display_name": "Daily Finance Cost (RM Mil)",
+            "target_value": 0.17,
+            "actual_value": 0.19,
+            "variance_pct": 10.35,
+            "risk_score": "High",
+            "is_favourable": false,
+            "root_cause": "Finance costs spiked above target — likely unplanned loan drawdown, interest rate movement, or new lease obligations.",
+            "recommended_action": "Review loan utilisation report. Confirm all drawdowns are approved and evaluate refinancing options to reduce cost."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Daily Finance Cost (RM Mil) (avg 10.3% off target). Finance costs spiked above target — likely unplanned loan drawdown, interest rate movement, or new lease obligations.",
+        "primary_action": "Review loan utilisation report. Confirm all drawdowns are approved and evaluate refinancing options to reduce cost.",
+        "forecast_pct": 50,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "REAL_20250118_48",
+        "incident_name": "Real Estate Development Incident",
+        "date_detected": "2025-01-18",
+        "primary_domain": "Real estate and infrastructure",
+        "subsidiaries": [
+          "JCIT"
+        ],
+        "risk_level": "High",
+        "impact_score": 8.5,
+        "is_all_favourable": false,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Gross_Profit_RM_Mil",
+            "display_name": "Daily Gross Profit (RM Mil)",
+            "target_value": 1.09,
+            "actual_value": 0.97,
+            "variance_pct": -10.25,
+            "risk_score": "High",
+            "is_favourable": false,
+            "root_cause": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
+            "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Daily Gross Profit (RM Mil) (avg 10.2% off target). Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
+        "primary_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
+        "forecast_pct": 50,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "AGRI_20250123_13",
+        "incident_name": "Plantation Yield & Revenue Incident",
+        "date_detected": "2025-01-23",
+        "primary_domain": "Agribusiness",
+        "subsidiaries": [
+          "Kulim (Malaysia) Berhad"
+        ],
+        "risk_level": "High",
+        "impact_score": 7.7,
+        "is_all_favourable": false,
+        "metric_count": 2,
+        "metrics": [
+          {
+            "metric_name": "Daily_Revenue_RM_Mil",
+            "display_name": "Daily Revenue (RM Mil)",
+            "target_value": 4.93,
+            "actual_value": 5.43,
+            "variance_pct": 10.01,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Revenue exceeded target — possible demand surge, new contract wins, or favourable commodity pricing.",
+            "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers."
+          },
+          {
+            "metric_name": "Daily_Gross_Profit_RM_Mil",
+            "display_name": "Daily Gross Profit (RM Mil)",
+            "target_value": 1.99,
+            "actual_value": 1.7,
+            "variance_pct": -14.58,
+            "risk_score": "High",
+            "is_favourable": false,
+            "root_cause": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
+            "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Daily Gross Profit (RM Mil) (avg 14.6% off target). Gross profit below target — input cost escalation, margin compression, or unfavourable product mix. Positive signal in Daily Revenue (RM Mil) — may indicate efficiency gains or demand surge.",
+        "primary_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
+        "forecast_pct": 50,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "REAL_20250102_37",
+        "incident_name": "Real Estate Development Incident",
+        "date_detected": "2025-01-02",
+        "primary_domain": "Real estate and infrastructure",
+        "subsidiaries": [
+          "Damansara Assets Sdn Bhd"
+        ],
+        "risk_level": "High",
+        "impact_score": 6.4,
+        "is_all_favourable": false,
+        "metric_count": 2,
+        "metrics": [
+          {
+            "metric_name": "Daily_Revenue_RM_Mil",
+            "display_name": "Daily Revenue (RM Mil)",
+            "target_value": 3.85,
+            "actual_value": 4.29,
+            "variance_pct": 11.41,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Revenue exceeded target — possible demand surge, new contract wins, or favourable commodity pricing.",
+            "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers."
+          },
+          {
+            "metric_name": "Daily_Gross_Profit_RM_Mil",
+            "display_name": "Daily Gross Profit (RM Mil)",
+            "target_value": 1.09,
+            "actual_value": 0.98,
+            "variance_pct": -10.73,
+            "risk_score": "High",
+            "is_favourable": false,
+            "root_cause": "Gross profit below target — input cost escalation, margin compression, or unfavourable product mix.",
+            "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs."
+          }
+        ],
+        "combined_narrative": "Adverse deviation detected across Daily Gross Profit (RM Mil) (avg 10.7% off target). Gross profit below target — input cost escalation, margin compression, or unfavourable product mix. Positive signal in Daily Revenue (RM Mil) — may indicate efficiency gains or demand surge.",
+        "primary_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers.",
+        "forecast_pct": 50,
+        "correlated_domain": null,
+        "correlation_note": null
+      }
+    ],
+    "opportunity": [
+      {
+        "incident_id": "OTHE_20250122_30",
+        "incident_name": "QSR & Consumer Business Incident",
+        "date_detected": "2025-01-22",
+        "primary_domain": "Others",
+        "subsidiaries": [
+          "QSR Brands (M) Holdings Bhd"
+        ],
+        "risk_level": "Critical",
+        "impact_score": 32.0,
+        "is_all_favourable": true,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Revenue_RM_Mil",
+            "display_name": "Daily Revenue (RM Mil)",
+            "target_value": 0.73,
+            "actual_value": 1.08,
+            "variance_pct": 47.99,
+            "risk_score": "Critical",
+            "is_favourable": true,
+            "root_cause": "Revenue exceeded target — possible demand surge, new contract wins, or favourable commodity pricing.",
+            "recommended_action": "Escalate to Group CFO and segment CEO immediately. Initiate emergency revenue audit, review top-5 contracts, and assess impact on Group annual guidance."
+          }
+        ],
+        "combined_narrative": "Positive signal in Daily Revenue (RM Mil) — may indicate efficiency gains or demand surge.",
+        "primary_action": "Escalate to Group CFO and segment CEO immediately. Initiate emergency revenue audit, review top-5 contracts, and assess impact on Group annual guidance.",
+        "forecast_pct": 75,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "OTHE_20250103_17",
+        "incident_name": "QSR & Consumer Business Incident",
+        "date_detected": "2025-01-03",
+        "primary_domain": "Others",
+        "subsidiaries": [
+          "Johor Port Sdn Bhd"
+        ],
+        "risk_level": "High",
+        "impact_score": 7.8,
+        "is_all_favourable": true,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Gross_Profit_RM_Mil",
+            "display_name": "Daily Gross Profit (RM Mil)",
+            "target_value": 0.34,
+            "actual_value": 0.42,
+            "variance_pct": 23.31,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Gross profit above target — improved cost efficiencies or higher-margin product mix.",
+            "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs."
+          }
+        ],
+        "combined_narrative": "Positive signal in Daily Gross Profit (RM Mil) — may indicate efficiency gains or demand surge.",
+        "primary_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
+        "forecast_pct": 45,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "REAL_20250113_45",
+        "incident_name": "Real Estate Development Incident",
+        "date_detected": "2025-01-13",
+        "primary_domain": "Real estate and infrastructure",
+        "subsidiaries": [
+          "JCorp Properties Sdn Bhd"
+        ],
+        "risk_level": "High",
+        "impact_score": 7.3,
+        "is_all_favourable": true,
+        "metric_count": 2,
+        "metrics": [
+          {
+            "metric_name": "Daily_Revenue_RM_Mil",
+            "display_name": "Daily Revenue (RM Mil)",
+            "target_value": 3.51,
+            "actual_value": 4.23,
+            "variance_pct": 20.48,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Revenue exceeded target — possible demand surge, new contract wins, or favourable commodity pricing.",
+            "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers."
+          },
+          {
+            "metric_name": "Daily_Gross_Profit_RM_Mil",
+            "display_name": "Daily Gross Profit (RM Mil)",
+            "target_value": 1.08,
+            "actual_value": 1.33,
+            "variance_pct": 23.4,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Gross profit above target — improved cost efficiencies or higher-margin product mix.",
+            "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs."
+          }
+        ],
+        "combined_narrative": "Positive signal in Daily Revenue (RM Mil), Daily Gross Profit (RM Mil) — may indicate efficiency gains or demand surge.",
+        "primary_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
+        "forecast_pct": 45,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "AGRI_20250121_11",
+        "incident_name": "Plantation Yield & Revenue Incident",
+        "date_detected": "2025-01-21",
+        "primary_domain": "Agribusiness",
+        "subsidiaries": [
+          "Kulim (Malaysia) Berhad"
+        ],
+        "risk_level": "High",
+        "impact_score": 6.3,
+        "is_all_favourable": true,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Revenue_RM_Mil",
+            "display_name": "Daily Revenue (RM Mil)",
+            "target_value": 4.84,
+            "actual_value": 5.75,
+            "variance_pct": 18.77,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Revenue exceeded target — possible demand surge, new contract wins, or favourable commodity pricing.",
+            "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers."
+          }
+        ],
+        "combined_narrative": "Positive signal in Daily Revenue (RM Mil) — may indicate efficiency gains or demand surge.",
+        "primary_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers.",
+        "forecast_pct": 45,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "OTHE_20250112_22",
+        "incident_name": "QSR & Consumer Business Incident",
+        "date_detected": "2025-01-12",
+        "primary_domain": "Others",
+        "subsidiaries": [
+          "Johor Port Sdn Bhd"
+        ],
+        "risk_level": "High",
+        "impact_score": 6.3,
+        "is_all_favourable": true,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Gross_Profit_RM_Mil",
+            "display_name": "Daily Gross Profit (RM Mil)",
+            "target_value": 0.36,
+            "actual_value": 0.43,
+            "variance_pct": 18.78,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Gross profit above target — improved cost efficiencies or higher-margin product mix.",
+            "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs."
+          }
+        ],
+        "combined_narrative": "Positive signal in Daily Gross Profit (RM Mil) — may indicate efficiency gains or demand surge.",
+        "primary_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
+        "forecast_pct": 45,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "AGRI_20250116_08",
+        "incident_name": "Plantation Yield & Revenue Incident",
+        "date_detected": "2025-01-16",
+        "primary_domain": "Agribusiness",
+        "subsidiaries": [
+          "Johor Plantation Group"
+        ],
+        "risk_level": "High",
+        "impact_score": 6.1,
+        "is_all_favourable": true,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Gross_Profit_RM_Mil",
+            "display_name": "Daily Gross Profit (RM Mil)",
+            "target_value": 1.96,
+            "actual_value": 2.32,
+            "variance_pct": 18.23,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Gross profit above target — improved cost efficiencies or higher-margin product mix.",
+            "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs."
+          }
+        ],
+        "combined_narrative": "Positive signal in Daily Gross Profit (RM Mil) — may indicate efficiency gains or demand surge.",
+        "primary_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
+        "forecast_pct": 45,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "REAL_20250128_56",
+        "incident_name": "Real Estate Finance Cost Incident",
+        "date_detected": "2025-01-28",
+        "primary_domain": "Real estate and infrastructure",
+        "subsidiaries": [
+          "JCorp Properties Sdn Bhd"
+        ],
+        "risk_level": "High",
+        "impact_score": 5.6,
+        "is_all_favourable": true,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Finance_Cost_RM_Mil",
+            "display_name": "Daily Finance Cost (RM Mil)",
+            "target_value": 0.38,
+            "actual_value": 0.31,
+            "variance_pct": -16.75,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Finance costs below target — early loan repayment or favourable refinancing.",
+            "recommended_action": "Review loan utilisation report. Confirm all drawdowns are approved and evaluate refinancing options to reduce cost."
+          }
+        ],
+        "combined_narrative": "Positive signal in Daily Finance Cost (RM Mil) — may indicate efficiency gains or demand surge.",
+        "primary_action": "Review loan utilisation report. Confirm all drawdowns are approved and evaluate refinancing options to reduce cost.",
+        "forecast_pct": 45,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "WELL_20250122_60",
+        "incident_name": "Healthcare Operations Incident",
+        "date_detected": "2025-01-22",
+        "primary_domain": "Wellness and healthcare",
+        "subsidiaries": [
+          "KPJ Johor Specialist Hospital"
+        ],
+        "risk_level": "High",
+        "impact_score": 5.2,
+        "is_all_favourable": true,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Gross_Profit_RM_Mil",
+            "display_name": "Daily Gross Profit (RM Mil)",
+            "target_value": 5.62,
+            "actual_value": 6.5,
+            "variance_pct": 15.59,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Gross profit above target — improved cost efficiencies or higher-margin product mix.",
+            "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs."
+          }
+        ],
+        "combined_narrative": "Positive signal in Daily Gross Profit (RM Mil) — may indicate efficiency gains or demand surge.",
+        "primary_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
+        "forecast_pct": 45,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "OTHE_20250118_26",
+        "incident_name": "Others Finance Cost Incident",
+        "date_detected": "2025-01-18",
+        "primary_domain": "Others",
+        "subsidiaries": [
+          "Johor Port Sdn Bhd"
+        ],
+        "risk_level": "High",
+        "impact_score": 5.1,
+        "is_all_favourable": true,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Finance_Cost_RM_Mil",
+            "display_name": "Daily Finance Cost (RM Mil)",
+            "target_value": 0.46,
+            "actual_value": 0.39,
+            "variance_pct": -15.36,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Finance costs below target — early loan repayment or favourable refinancing.",
+            "recommended_action": "Review loan utilisation report. Confirm all drawdowns are approved and evaluate refinancing options to reduce cost."
+          }
+        ],
+        "combined_narrative": "Positive signal in Daily Finance Cost (RM Mil) — may indicate efficiency gains or demand surge.",
+        "primary_action": "Review loan utilisation report. Confirm all drawdowns are approved and evaluate refinancing options to reduce cost.",
+        "forecast_pct": 45,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "OTHE_20250123_32",
+        "incident_name": "QSR & Consumer Business Incident",
+        "date_detected": "2025-01-23",
+        "primary_domain": "Others",
+        "subsidiaries": [
+          "Sindora Berhad"
+        ],
+        "risk_level": "High",
+        "impact_score": 4.9,
+        "is_all_favourable": true,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Revenue_RM_Mil",
+            "display_name": "Daily Revenue (RM Mil)",
+            "target_value": 0.73,
+            "actual_value": 0.84,
+            "variance_pct": 14.64,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Revenue exceeded target — possible demand surge, new contract wins, or favourable commodity pricing.",
+            "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers."
+          }
+        ],
+        "combined_narrative": "Positive signal in Daily Revenue (RM Mil) — may indicate efficiency gains or demand surge.",
+        "primary_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers.",
+        "forecast_pct": 45,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "OTHE_20250121_29",
+        "incident_name": "QSR & Consumer Business Incident",
+        "date_detected": "2025-01-21",
+        "primary_domain": "Others",
+        "subsidiaries": [
+          "Johor Port Sdn Bhd"
+        ],
+        "risk_level": "High",
+        "impact_score": 4.7,
+        "is_all_favourable": true,
+        "metric_count": 2,
+        "metrics": [
+          {
+            "metric_name": "Daily_Revenue_RM_Mil",
+            "display_name": "Daily Revenue (RM Mil)",
+            "target_value": 0.71,
+            "actual_value": 0.79,
+            "variance_pct": 10.32,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Revenue exceeded target — possible demand surge, new contract wins, or favourable commodity pricing.",
+            "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers."
+          },
+          {
+            "metric_name": "Daily_Gross_Profit_RM_Mil",
+            "display_name": "Daily Gross Profit (RM Mil)",
+            "target_value": 0.35,
+            "actual_value": 0.42,
+            "variance_pct": 17.68,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Gross profit above target — improved cost efficiencies or higher-margin product mix.",
+            "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs."
+          }
+        ],
+        "combined_narrative": "Positive signal in Daily Revenue (RM Mil), Daily Gross Profit (RM Mil) — may indicate efficiency gains or demand surge.",
+        "primary_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
+        "forecast_pct": 45,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "REAL_20250124_53",
+        "incident_name": "Real Estate Finance Cost Incident",
+        "date_detected": "2025-01-24",
+        "primary_domain": "Real estate and infrastructure",
+        "subsidiaries": [
+          "JCIT"
+        ],
+        "risk_level": "High",
+        "impact_score": 4.7,
+        "is_all_favourable": true,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Finance_Cost_RM_Mil",
+            "display_name": "Daily Finance Cost (RM Mil)",
+            "target_value": 0.36,
+            "actual_value": 0.31,
+            "variance_pct": -13.95,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Finance costs below target — early loan repayment or favourable refinancing.",
+            "recommended_action": "Review loan utilisation report. Confirm all drawdowns are approved and evaluate refinancing options to reduce cost."
+          }
+        ],
+        "combined_narrative": "Positive signal in Daily Finance Cost (RM Mil) — may indicate efficiency gains or demand surge.",
+        "primary_action": "Review loan utilisation report. Confirm all drawdowns are approved and evaluate refinancing options to reduce cost.",
+        "forecast_pct": 45,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "OTHE_20250110_20",
+        "incident_name": "QSR & Consumer Business Incident",
+        "date_detected": "2025-01-10",
+        "primary_domain": "Others",
+        "subsidiaries": [
+          "QSR Brands (M) Holdings Bhd"
+        ],
+        "risk_level": "High",
+        "impact_score": 4.5,
+        "is_all_favourable": true,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Outlet_Transactions",
+            "display_name": "Outlet Transactions",
+            "target_value": 3184.0,
+            "actual_value": 3614.0,
+            "variance_pct": 13.51,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Outlet transactions above target — promotional campaign success or new outlet openings.",
+            "recommended_action": "Analyse transaction data by outlet cluster. Review stock availability and escalate to franchise operations team."
+          }
+        ],
+        "combined_narrative": "Positive signal in Outlet Transactions — may indicate efficiency gains or demand surge.",
+        "primary_action": "Analyse transaction data by outlet cluster. Review stock availability and escalate to franchise operations team.",
+        "forecast_pct": 45,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "REAL_20250119_50",
+        "incident_name": "Real Estate Development Incident",
+        "date_detected": "2025-01-19",
+        "primary_domain": "Real estate and infrastructure",
+        "subsidiaries": [
+          "JCorp Properties Sdn Bhd"
+        ],
+        "risk_level": "High",
+        "impact_score": 4.4,
+        "is_all_favourable": true,
+        "metric_count": 3,
+        "metrics": [
+          {
+            "metric_name": "Units_Under_Construction",
+            "display_name": "Units Under Construction",
+            "target_value": 87.0,
+            "actual_value": 97.0,
+            "variance_pct": 11.49,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Construction units above target — accelerated project milestones.",
+            "recommended_action": "Conduct site progress review. Identify bottlenecks in materials procurement and sub-contractor performance."
+          },
+          {
+            "metric_name": "Daily_Revenue_RM_Mil",
+            "display_name": "Daily Revenue (RM Mil)",
+            "target_value": 3.82,
+            "actual_value": 4.37,
+            "variance_pct": 14.25,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Revenue exceeded target — possible demand surge, new contract wins, or favourable commodity pricing.",
+            "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers."
+          },
+          {
+            "metric_name": "Daily_Gross_Profit_RM_Mil",
+            "display_name": "Daily Gross Profit (RM Mil)",
+            "target_value": 1.1,
+            "actual_value": 1.25,
+            "variance_pct": 13.9,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Gross profit above target — improved cost efficiencies or higher-margin product mix.",
+            "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs."
+          }
+        ],
+        "combined_narrative": "Positive signal in Units Under Construction, Daily Revenue (RM Mil), Daily Gross Profit (RM Mil) — may indicate efficiency gains or demand surge.",
+        "primary_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers.",
+        "forecast_pct": 45,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "AGRI_20250118_09",
+        "incident_name": "Plantation Yield & Revenue Incident",
+        "date_detected": "2025-01-18",
+        "primary_domain": "Agribusiness",
+        "subsidiaries": [
+          "Johor Plantation Group"
+        ],
+        "risk_level": "High",
+        "impact_score": 4.3,
+        "is_all_favourable": true,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Revenue_RM_Mil",
+            "display_name": "Daily Revenue (RM Mil)",
+            "target_value": 4.55,
+            "actual_value": 5.14,
+            "variance_pct": 12.75,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Revenue exceeded target — possible demand surge, new contract wins, or favourable commodity pricing.",
+            "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers."
+          }
+        ],
+        "combined_narrative": "Positive signal in Daily Revenue (RM Mil) — may indicate efficiency gains or demand surge.",
+        "primary_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers.",
+        "forecast_pct": 45,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "OTHE_20250116_23",
+        "incident_name": "QSR & Consumer Business Incident",
+        "date_detected": "2025-01-16",
+        "primary_domain": "Others",
+        "subsidiaries": [
+          "QSR Brands (M) Holdings Bhd"
+        ],
+        "risk_level": "High",
+        "impact_score": 4.3,
+        "is_all_favourable": true,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Gross_Profit_RM_Mil",
+            "display_name": "Daily Gross Profit (RM Mil)",
+            "target_value": 0.35,
+            "actual_value": 0.39,
+            "variance_pct": 12.8,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Gross profit above target — improved cost efficiencies or higher-margin product mix.",
+            "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs."
+          }
+        ],
+        "combined_narrative": "Positive signal in Daily Gross Profit (RM Mil) — may indicate efficiency gains or demand surge.",
+        "primary_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
+        "forecast_pct": 45,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "WELL_20250102_57",
+        "incident_name": "Healthcare Operations Incident",
+        "date_detected": "2025-01-02",
+        "primary_domain": "Wellness and healthcare",
+        "subsidiaries": [
+          "KPJ Johor Specialist Hospital"
+        ],
+        "risk_level": "High",
+        "impact_score": 4.3,
+        "is_all_favourable": true,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Patient_Admissions",
+            "display_name": "Patient Admissions",
+            "target_value": 1213.0,
+            "actual_value": 1370.0,
+            "variance_pct": 12.94,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Patient admissions above target — seasonal demand peak or expanded bed capacity.",
+            "recommended_action": "Review admissions data by hospital unit. Identify specific wards/services affected and engage clinical operations team."
+          }
+        ],
+        "combined_narrative": "Positive signal in Patient Admissions — may indicate efficiency gains or demand surge.",
+        "primary_action": "Review admissions data by hospital unit. Identify specific wards/services affected and engage clinical operations team.",
+        "forecast_pct": 45,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "OTHE_20250130_36",
+        "incident_name": "QSR & Consumer Business Incident",
+        "date_detected": "2025-01-30",
+        "primary_domain": "Others",
+        "subsidiaries": [
+          "Johor Port Sdn Bhd"
+        ],
+        "risk_level": "High",
+        "impact_score": 3.8,
+        "is_all_favourable": true,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Revenue_RM_Mil",
+            "display_name": "Daily Revenue (RM Mil)",
+            "target_value": 0.71,
+            "actual_value": 0.79,
+            "variance_pct": 11.49,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Revenue exceeded target — possible demand surge, new contract wins, or favourable commodity pricing.",
+            "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers."
+          }
+        ],
+        "combined_narrative": "Positive signal in Daily Revenue (RM Mil) — may indicate efficiency gains or demand surge.",
+        "primary_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers.",
+        "forecast_pct": 45,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "OTHE_20250124_33",
+        "incident_name": "QSR & Consumer Business Incident",
+        "date_detected": "2025-01-24",
+        "primary_domain": "Others",
+        "subsidiaries": [
+          "Johor Port Sdn Bhd"
+        ],
+        "risk_level": "High",
+        "impact_score": 3.7,
+        "is_all_favourable": true,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Gross_Profit_RM_Mil",
+            "display_name": "Daily Gross Profit (RM Mil)",
+            "target_value": 0.36,
+            "actual_value": 0.4,
+            "variance_pct": 11.06,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Gross profit above target — improved cost efficiencies or higher-margin product mix.",
+            "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs."
+          }
+        ],
+        "combined_narrative": "Positive signal in Daily Gross Profit (RM Mil) — may indicate efficiency gains or demand surge.",
+        "primary_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
+        "forecast_pct": 45,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "AGRI_20250109_04",
+        "incident_name": "Plantation Yield & Revenue Incident",
+        "date_detected": "2025-01-09",
+        "primary_domain": "Agribusiness",
+        "subsidiaries": [
+          "Kulim (Malaysia) Berhad"
+        ],
+        "risk_level": "High",
+        "impact_score": 3.6,
+        "is_all_favourable": true,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "FFB_Processed_Tonnes",
+            "display_name": "FFB Processed (Tonnes)",
+            "target_value": 4306.0,
+            "actual_value": 4767.0,
+            "variance_pct": 10.71,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Fresh fruit bunch processing exceeded target — peak harvest season or expanded capacity.",
+            "recommended_action": "Increase mill monitoring frequency. Review equipment service logs and assess estate-level yield data for harvest disruptions."
+          }
+        ],
+        "combined_narrative": "Positive signal in FFB Processed (Tonnes) — may indicate efficiency gains or demand surge.",
+        "primary_action": "Increase mill monitoring frequency. Review equipment service logs and assess estate-level yield data for harvest disruptions.",
+        "forecast_pct": 45,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "AGRI_20250119_10",
+        "incident_name": "Agribusiness Finance Cost Incident",
+        "date_detected": "2025-01-19",
+        "primary_domain": "Agribusiness",
+        "subsidiaries": [
+          "Kulim (Malaysia) Berhad"
+        ],
+        "risk_level": "High",
+        "impact_score": 3.6,
+        "is_all_favourable": true,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Finance_Cost_RM_Mil",
+            "display_name": "Daily Finance Cost (RM Mil)",
+            "target_value": 0.16,
+            "actual_value": 0.15,
+            "variance_pct": -10.94,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Finance costs below target — early loan repayment or favourable refinancing.",
+            "recommended_action": "Review loan utilisation report. Confirm all drawdowns are approved and evaluate refinancing options to reduce cost."
+          }
+        ],
+        "combined_narrative": "Positive signal in Daily Finance Cost (RM Mil) — may indicate efficiency gains or demand surge.",
+        "primary_action": "Review loan utilisation report. Confirm all drawdowns are approved and evaluate refinancing options to reduce cost.",
+        "forecast_pct": 45,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "OTHE_20250108_18",
+        "incident_name": "QSR & Consumer Business Incident",
+        "date_detected": "2025-01-08",
+        "primary_domain": "Others",
+        "subsidiaries": [
+          "Sindora Berhad"
+        ],
+        "risk_level": "High",
+        "impact_score": 3.6,
+        "is_all_favourable": true,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Revenue_RM_Mil",
+            "display_name": "Daily Revenue (RM Mil)",
+            "target_value": 0.76,
+            "actual_value": 0.84,
+            "variance_pct": 10.68,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Revenue exceeded target — possible demand surge, new contract wins, or favourable commodity pricing.",
+            "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers."
+          }
+        ],
+        "combined_narrative": "Positive signal in Daily Revenue (RM Mil) — may indicate efficiency gains or demand surge.",
+        "primary_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers.",
+        "forecast_pct": 45,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "OTHE_20250126_34",
+        "incident_name": "QSR & Consumer Business Incident",
+        "date_detected": "2025-01-26",
+        "primary_domain": "Others",
+        "subsidiaries": [
+          "Sindora Berhad"
+        ],
+        "risk_level": "High",
+        "impact_score": 3.6,
+        "is_all_favourable": true,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Gross_Profit_RM_Mil",
+            "display_name": "Daily Gross Profit (RM Mil)",
+            "target_value": 0.36,
+            "actual_value": 0.4,
+            "variance_pct": 10.73,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Gross profit above target — improved cost efficiencies or higher-margin product mix.",
+            "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs."
+          }
+        ],
+        "combined_narrative": "Positive signal in Daily Gross Profit (RM Mil) — may indicate efficiency gains or demand surge.",
+        "primary_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
+        "forecast_pct": 45,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "REAL_20250112_43",
+        "incident_name": "Real Estate Development Incident",
+        "date_detected": "2025-01-12",
+        "primary_domain": "Real estate and infrastructure",
+        "subsidiaries": [
+          "JCIT"
+        ],
+        "risk_level": "High",
+        "impact_score": 3.6,
+        "is_all_favourable": true,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Revenue_RM_Mil",
+            "display_name": "Daily Revenue (RM Mil)",
+            "target_value": 3.76,
+            "actual_value": 4.16,
+            "variance_pct": 10.68,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Revenue exceeded target — possible demand surge, new contract wins, or favourable commodity pricing.",
+            "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers."
+          }
+        ],
+        "combined_narrative": "Positive signal in Daily Revenue (RM Mil) — may indicate efficiency gains or demand surge.",
+        "primary_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers.",
+        "forecast_pct": 45,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "REAL_20250120_51",
+        "incident_name": "Real Estate Development Incident",
+        "date_detected": "2025-01-20",
+        "primary_domain": "Real estate and infrastructure",
+        "subsidiaries": [
+          "Damansara Assets Sdn Bhd"
+        ],
+        "risk_level": "High",
+        "impact_score": 3.6,
+        "is_all_favourable": true,
+        "metric_count": 2,
+        "metrics": [
+          {
+            "metric_name": "Daily_Revenue_RM_Mil",
+            "display_name": "Daily Revenue (RM Mil)",
+            "target_value": 3.72,
+            "actual_value": 4.11,
+            "variance_pct": 10.35,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Revenue exceeded target — possible demand surge, new contract wins, or favourable commodity pricing.",
+            "recommended_action": "Schedule segment finance review within 24 hrs. Reassess quarterly sales forecast and identify revenue recovery levers."
+          },
+          {
+            "metric_name": "Daily_Gross_Profit_RM_Mil",
+            "display_name": "Daily Gross Profit (RM Mil)",
+            "target_value": 1.12,
+            "actual_value": 1.24,
+            "variance_pct": 11.32,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Gross profit above target — improved cost efficiencies or higher-margin product mix.",
+            "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs."
+          }
+        ],
+        "combined_narrative": "Positive signal in Daily Revenue (RM Mil), Daily Gross Profit (RM Mil) — may indicate efficiency gains or demand surge.",
+        "primary_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
+        "forecast_pct": 45,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "OTHE_20250101_16",
+        "incident_name": "QSR & Consumer Business Incident",
+        "date_detected": "2025-01-01",
+        "primary_domain": "Others",
+        "subsidiaries": [
+          "QSR Brands (M) Holdings Bhd"
+        ],
+        "risk_level": "High",
+        "impact_score": 3.4,
+        "is_all_favourable": true,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Gross_Profit_RM_Mil",
+            "display_name": "Daily Gross Profit (RM Mil)",
+            "target_value": 0.36,
+            "actual_value": 0.39,
+            "variance_pct": 10.31,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Gross profit above target — improved cost efficiencies or higher-margin product mix.",
+            "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs."
+          }
+        ],
+        "combined_narrative": "Positive signal in Daily Gross Profit (RM Mil) — may indicate efficiency gains or demand surge.",
+        "primary_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
+        "forecast_pct": 45,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "OTHE_20250120_28",
+        "incident_name": "QSR & Consumer Business Incident",
+        "date_detected": "2025-01-20",
+        "primary_domain": "Others",
+        "subsidiaries": [
+          "Sindora Berhad"
+        ],
+        "risk_level": "High",
+        "impact_score": 3.3,
+        "is_all_favourable": true,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Outlet_Transactions",
+            "display_name": "Outlet Transactions",
+            "target_value": 3309.0,
+            "actual_value": 3641.0,
+            "variance_pct": 10.03,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Outlet transactions above target — promotional campaign success or new outlet openings.",
+            "recommended_action": "Analyse transaction data by outlet cluster. Review stock availability and escalate to franchise operations team."
+          }
+        ],
+        "combined_narrative": "Positive signal in Outlet Transactions — may indicate efficiency gains or demand surge.",
+        "primary_action": "Analyse transaction data by outlet cluster. Review stock availability and escalate to franchise operations team.",
+        "forecast_pct": 45,
+        "correlated_domain": null,
+        "correlation_note": null
+      },
+      {
+        "incident_id": "REAL_20250121_52",
+        "incident_name": "Real Estate Development Incident",
+        "date_detected": "2025-01-21",
+        "primary_domain": "Real estate and infrastructure",
+        "subsidiaries": [
+          "JCIT"
+        ],
+        "risk_level": "High",
+        "impact_score": 3.3,
+        "is_all_favourable": true,
+        "metric_count": 1,
+        "metrics": [
+          {
+            "metric_name": "Daily_Gross_Profit_RM_Mil",
+            "display_name": "Daily Gross Profit (RM Mil)",
+            "target_value": 1.16,
+            "actual_value": 1.27,
+            "variance_pct": 10.0,
+            "risk_score": "High",
+            "is_favourable": true,
+            "root_cause": "Gross profit above target — improved cost efficiencies or higher-margin product mix.",
+            "recommended_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs."
+          }
+        ],
+        "combined_narrative": "Positive signal in Daily Gross Profit (RM Mil) — may indicate efficiency gains or demand surge.",
+        "primary_action": "Review cost-of-sales breakdown. Identify top-3 margin leakage sources and submit remediation plan within 48 hrs.",
+        "forecast_pct": 45,
+        "correlated_domain": null,
+        "correlation_note": null
+      }
+    ]
   }
-]
+}

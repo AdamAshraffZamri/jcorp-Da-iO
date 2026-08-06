@@ -11,29 +11,33 @@ class DashboardController extends Controller
         $jsonPath = storage_path('app/anomalies_alerts.json');
 
         if (! file_exists($jsonPath)) {
-            $alerts = [];
+            $raw = [];
         } else {
-            $alerts = json_decode(file_get_contents($jsonPath), true) ?? [];
+            $raw = json_decode(file_get_contents($jsonPath), true) ?? [];
         }
 
-        // Separate Critical vs High
-        $critical = array_values(array_filter($alerts, fn($a) => $a['risk_score'] === 'Critical'));
-        $high     = array_values(array_filter($alerts, fn($a) => $a['risk_score'] === 'High'));
+        // ── Funnel metrics ──────────────────────────────────────
+        $funnel = $raw['funnel_metrics'] ?? [
+            'total_signals' => 0,
+            'suppressed'    => 0,
+            'retained'      => 0,
+            'escalated'     => 0,
+        ];
 
-        // Counts
-        $totalCount      = count($alerts);
-        $criticalCount   = count($critical);
-        $highCount       = count($high);
-        $correlatedCount = count(array_filter($alerts, fn($a) => ! empty($a['correlated_domain'])));
+        // ── Categorised incidents ────────────────────────────────
+        $cats = $raw['categorized_incidents'] ?? [];
+
+        $immediateAction = $cats['immediate_action'] ?? [];
+        $emergingRisk    = $cats['emerging_risk']    ?? [];
+        $monitor         = $cats['monitor']          ?? [];
+        $opportunity     = $cats['opportunity']      ?? [];
 
         return view('dashboard', compact(
-            'alerts',
-            'critical',
-            'high',
-            'totalCount',
-            'criticalCount',
-            'highCount',
-            'correlatedCount'
+            'funnel',
+            'immediateAction',
+            'emergingRisk',
+            'monitor',
+            'opportunity'
         ));
     }
 }
