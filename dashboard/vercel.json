@@ -33,7 +33,7 @@
     ],
     "env": {
         "APP_ENV": "production",
-        "APP_DEBUG": "false",
+        "APP_DEBUG": "true",
         "CACHE_DRIVER": "array",
         "SESSION_DRIVER": "array",
         "QUEUE_CONNECTION": "sync",
